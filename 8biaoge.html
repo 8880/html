@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表格</title>
+  </head>
+  <body>
+
+<!-- boder 设置表格的边框(默认为0)  cellspacing 设置单元格与单元格边框之间的空白间隙 -->
+    <table border="1" cellspacing="0">
+
+<!--表格的标题位于表格之上, cation标签必须紧随table标签之后. -->
+    <caption>
+      <h2>学生信息</h2>
+    </caption>
+
+<!-- <thead></thead>：用于定义表格的头部，必须位于<table></table>标记中，一般包含网页的logo和导航等头部信息。 -->
+    <thead>
+      <tr align="center">
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+      </tr>
+    </thead>
+
+<!-- <tbody></tbody>：用于定义表格的主体，位于<table></table>标记中<tfoot></ tfoot >标记之后，一般包含网页中除头部和底部之外的其他内容。 -->
+    <tbody>
+<!-- tr只能嵌套td，th，不能嵌套其他！！！！  -->
+      <tr align="center">                     <!-- 表格内信息居中 -->
+<!-- td就是容器,什么标签都可嵌套 -->
+        <td><h1>老大</h1></td>
+        <td>50</td>
+        <td>man</td>
+      </tr>
+
+      <tr align="center">
+        <td>老二</td>
+        <td><h2>40</h2></td>
+        <td><h1>man</h1></td>
+      </tr>
+
+      <tr align="center">
+        <td>老三</td>
+        <td>30</td>
+        <td>man</td>
+      </tr>
+
+    </tbody>
+
+<!-- <tfoot></ tfoot >：用于定义表格的页脚，位于<table></table>标记中<thead></thead>标记之后，一般包含网页底部的企业信息等。 -->
+    <tfoot>
+      <tr>
+        <td>foot1</td>
+        <td>foot2</td>
+        <td>
+          <table>
+            <tr>
+              <td>表格嵌套</td>
+            </tr>
+            <tr>
+              <td>111</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tfoot>
+
+    </table>
+
+  </body>
+</html>
