@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文本外观属性</title>
+    <style>
+      .one {
+        font-size: 50px;
+        letter-spacing: 10px; /*letter-spacing属性用于定义字间距,可以为负值*/
+      }
+
+      .two {
+        font-size: 30px;
+        word-spacing: 50px;  /* word-spacing属性用于定义英文单词之间的间距,可负*/
+
+      }
+
+      .three {
+        font-size: 30px;
+        /*line-height: 120%;*/
+        /*line-height: 36px;*/
+        /*line-height: 1.2em;*/
+        /*
+        three的行高为 36px
+        以上3种方式设置的line-height都会让后代继承：继承祖先元素的行高！
+        */
+        /*
+        后代会继承该因子而不是继承父元素行高！！！！
+        */
+        line-height: 1.2;    /* 这个的后代的会继承 上面的不会*/
+      }
+
+      .three p {
+        font-size: 50px;
+      }
+
+      a {     /* 文本装饰 text-decoration */
+
+        /* underline overline line-through*/
+        text-decoration: none;    /*没有装饰 a标签默认下划线*/
+      }
+
+      .four {   /*水平对齐方式 text-align*/
+
+        /*left right center*/
+        text-align: center;
+      }
+
+      img.small {   /*定义图片大小*/
+        width: 200px;
+        height: 200px;
+      }
+      .five img {    /*垂直对齐方式 vertical-align(适用于行内元素) */
+
+        vertical-align: middle;  /*将支持valign特性的对象的内容与对象中部对齐*/
+      }
+
+      .six {    /*首行缩进 text-indent 可用负值*/
+        /*text-indent: 20px;*/
+        text-indent: 2em;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p class="one">
+      hello中国
+    </p>
+
+    <p class="two">
+      nihao hello bye bye
+    </p>
+
+    <div class="three">
+      dsadasdsaddsadas <br> 的撒多撒多撒 <br> 发士大夫飞洒发发大水都是发送到特就会故意他 <br>
+      <p>
+        sdasdasdaadas <br> 发的是飞洒案说法撒发生 <br> asdfsafda <br>
+      </p>
+    </div>
+
+    <div class"four">
+    <a href="#">一个链接</a>
+    </div>
+
+    <div class="four">
+      dsadsdasdssadsdadsasadsa <br>dsadsadsadsaddasdas <br> dsadasdasdasd <br>
+      <!-- 图片也可以 -->
+      <img class="small" src="/home/linux/桌面/u=2395086166,3837381408&fm=214&gp=0.jpg" alt="">
+      <img class="small" src="/home/linux/桌面/u=2395086166,3837381408&fm=214&gp=0.jpg" alt="">
+    </div>
+
+    <p class="five">
+      <img class="small" src="/home/linux/桌面/u=2395086166,3837381408&fm=214&gp=0.jpg" alt=""><span>宇智波鼬</span>
+    </p>
+
+    <p class="six">
+      可是结果看见了大家好就到了看好就打开了很久了看就好了看见好看 <br>
+      可是结果看见了大家好就到了看好就打开了很久了看就好了看见好看 <br>
+      可是结果看见了大家好就到了看好就打开了很久了看就好了看见好看 <br>
+      可是结果看见了大家好就到了看好就打开了很久了看就好了看见好看 <br>
+      可是结果看见了大家好就到了看好就打开了很久了看就好了看见好看 <br>
+      可是结果看见了大家好就到了看好就打开了很久了看就好了看见好看 <br>
+    </p>
+
+  </body>
+</html>
