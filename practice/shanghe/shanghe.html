@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>尚合</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .w {
+      width: 986px;
+      margin: 0 auto;
+    }
+
+    .top {
+      position: relative;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .head .right {
+      float: right;
+    }
+
+    .head .left {
+      float: left;
+      padding-top: 18px;
+      padding-left: 500px;
+    }
+
+    .head .top_nav_bj {
+      background-image: url("./head_bg.png");
+      height: 110px;
+      margin-top: -50px;
+    }
+
+    .head a {
+      color: #000;
+      font-size: 18px;
+      padding: 0 25px;
+      border-left: 1px #d3d7d4 solid;
+    }
+
+    .page {
+      margin: 10px 900px;
+    }
+
+    .gg_bj {
+      background-color: #F6F5F7;
+      height: 40px;
+      line-height: 40px;
+      font-size: 15px;
+      border-top: 2px #F6F5DC solid;
+      border-bottom: 2px #F6F5DC solid;
+    }
+
+    .gg_right {
+      float: right;
+      margin-top: 12px;
+      display: inline-block;
+    }
+
+    .box-a {
+      width: 27%;
+      border: solid #d3d7d4 1px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      height: 255px;
+      margin-right: 11px;
+      padding: 15px 10px 10px 10px;
+    }
+
+    .box-b {
+      width: 37%;
+      border: solid #d3d7d4 1px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      height: 255px;
+      margin-right: 11px;
+      padding: 15px 10px 10px 10px;
+    }
+
+    .box-c {
+      width: 27%;
+      border: solid #d3d7d4 1px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      height: 255px;
+      padding: 15px 10px 10px 10px;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    .box-t {
+      background: url("canvas_r4_c4.png") no-repeat;
+      text-indent: 1em;
+      height: 15px;
+      line-height: 15px;
+    }
+
+    img.small {
+      margin-top: 20px;
+      width: 270px;
+      height: 180px;
+    }
+
+    .box-b ul li {
+      margin-left: 1px;
+      margin-top: 25px;
+      height: 2px;
+      line-height: 2px;
+      border-bottom: 1px dashed #999d9c;
+      padding-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .box-c ul li {
+      margin-left: 1px;
+      margin-top: 18px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: 45px;
+      border-left: 3px dashed #7fb80e;
+      padding-left: 5px;
+    }
+
+    .box-c .wf {
+      font-size: 14px;
+      color: #999d9c;
+      margin: 22px;
+      margin-top: 55px;
+      height: 25px;
+      line-height: 25px;
+    }
+
+    .clearfix::after {
+      visibility: hidden;
+      clear: both;
+      display: block;
+      content: ".";
+      height: 0;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .bottom {
+      background-image: url("./foot.png");
+      height: 305px;
+      position: relative;
+    }
+
+    .bottom .left {
+      margin: 10px;
+      float: left;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+
+    .bottom a {
+      color: #999d9c;
+    }
+
+    .bottom .di {
+      margin-top: 20px;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head">
+    <div class="top w">
+      <img style="margin-top:10px;" src="./logo.png" alt="">
+      <img style="margin-top:10px;" class="right" src="input_r1_c2.png" alt="">
+      <img style="margin-top:10px;" class="right" src="input_r1_c1.png" alt="">
+    </div>
+    <div class="top_nav_bj">
+      <img style="position: fixed;top: 98px;right: 316px;" src="./taobao.jpg" alt="">
+      <div class="left w">
+        <a href="#"><b>首&nbsp;&nbsp;页</b></a>
+        <a href="#"><b>智能手机</b></a>
+        <a href="#"><b>平板电脑</b></a>
+        <a href="#"><b>配&nbsp;&nbsp;件</b></a>
+        <a href="#"><b>服务支持</b></a>
+        <a href="#"><b>关于尚合</b></a>
+      </div>
+    </div>
+  </div>
+  <div class="w">
+    <img src="./banner.png" alt="">
+  </div>
+  <div class="w page">
+    <img src="./point.png" alt="">
+  </div>
+  <div class="gg_bj">
+    <div class="w">
+      <b>最新公告:</b> &nbsp;&nbsp;尚合Aone智能手机入网证已经获gongxinbumen审批下发。尚合官方
+      <img class="gg_right" src="./share.png" alt="">
+    </div>
+  </div>
+  <div class="w">
+    <div class="clearfix">
+      <div class="box-a left ">
+        <div class="box-t">
+          <p><b>&nbsp;<a style="color:#7fb80e;font-size:18px" href="#">新品发布</a></b></p>
+          <img class="small" src="./11111.png" alt="">
+        </div>
+      </div>
+      <div class="box-b left">
+        <div class="box-t">
+          <p class="left">&nbsp;<a style="color:#7fb80e;font-size:18px" href="#"><b>新闻中心</b></a></p>
+          <p class="right">&nbsp;<a style="color:#72777b" href="#"><b>更多</b></a></p>
+        </div>
+        <ul>
+          <li><a style="color:red;font-size:15px" href="#"><b>致歉公告</b></a></li>
+          <li><a style="color:#999d9c" href="#">首批尚合Aonet已全部售馨</a></li>
+          <li><a style="color:#999d9c" href="#">【媒体报道】国产高性价比 尚合Aonet四核手机评测</a></li>
+          <li><a style="color:#999d9c" href="#">我公司产品已经通过了国家强制性产品3c认证</a></li>
+          <li><a style="color:#999d9c" href="#">尚合Anoet智能手机入网证已经获工信部门审批下发</a></li>
+          <li><a style="color:#999d9c" href="#">我司通过ISO9001：2008国际质量管理体系认证</a></li>
+        </ul>
+      </div>
+      <div class="box-c left">
+        <div class="box-t">
+          <p><b>&nbsp;<a style="color:#7fb80e;font-size:18px" href="#">技术与支持</a></b></p>
+        </div>
+        <ul>
+          <li><a style="color:#999d9c;font-size:14px" href="#"><b>售后服务</b></a></li>
+          <li><a style="color:#999d9c;font-size:14px" href="#"><b>售后服务</b></a></li>
+          <li><a style="color:#999d9c;font-size:14px" href="#"><b>联保网点</b></a></li>
+          <li><a style="color:#999d9c;font-size:14px" href="#"><b>常见问题FAQ？</b></a></li>
+        </ul>
+        <div class="wf">
+          <b>深圳市汇聚众合科技发展有限公司</b> <br>
+          <b>服务热线：400-633-7922</b>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="bottom">
+    <img style="position: absolute;right:425px" src="./canvas_r4_c3.png" alt="">
+    <div class="w clearfix">
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>尚合首页</b></a></li>
+        <li class="">返回首页</li>
+      </ul>
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>智能手机</b></a></li>
+        <li>Aone-T</li>
+        <li>Aone</li>
+      </ul>
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>平板电脑</b></a></li>
+        <li>尚PAD S200</li>
+        <li>尚PAD S100</li>
+        <li>尚PAD SH-Q7</li>
+        <li>尚PAD SH-Q5</li>
+      </ul>
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>配件中心</b></a></li>
+        <li>Aone 智能手机</li>
+      </ul>
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>服务与支持</b></a></li>
+        <li>售后服务</li>
+        <li>投诉与建议</li>
+        <li>联保网点</li>
+        <li>常见问题FAQ</li>
+        <li>订单查询</li>
+        <li>下载专区</li>
+      </ul>
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>关于我们</b></a></li>
+        <li>公司介绍</li>
+        <li>企业文化</li>
+        <li>工作机会</li>
+        <li>法律声明</li>
+        <li>联系我们</li>
+      </ul>
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>新闻中心</b></a></li>
+        <li>公司新闻</li>
+        <li>媒体报道</li>
+        <li>行业动态会</li>
+      </ul>
+      <ul class="left">
+        <li><a style="height:40px; line-height:40px" href="#"><b>常用链接</b></a></li>
+        <li>百度</li>
+        <li>Google</li>
+        <li>新浪微博</li>
+      </ul>
+    </div>
+    <div class="di">
+      艾瑞科技人员港囧额外人体验如今也发给让我太惹眼突然热问题 <br> 范德萨发水电费水电费水电费水电费 <br>
+      <img style="margin-top:3px;" src="./share.png" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

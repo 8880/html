@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>京东</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .w {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .top {
+      background-color: #000;
+      height: 80px;
+    }
+
+    .top .back {
+      background-image: url("1.jpg");
+      height: 80px;
+    }
+
+    .back2 {
+      background-color: #e3e4e5;
+      height: 30px;
+    }
+
+    .head {
+      height: 176px;
+      background-color: #f6f6f6;
+    }
+
+    .back2 .dog {
+      background-color: #fff;
+      border: solid 1px #e3e4e5;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    .clearfix::after {
+      visibility: hidden;
+      clear: both;
+      display: block;
+      content: ".";
+      height: 0;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .divo {
+      font-size: 13px;
+      height: 34px;
+      line-height: 34px;
+      margin-left: 224px;
+    }
+
+    .divo a {
+      color: #a6a7a9;
+      border-left: 1px solid #cccccc;
+      padding-left: 10px;
+    }
+
+    .divo ul li {
+      float: right;
+      margin-right: 20px;
+    }
+
+    .sousuo {
+      height: 60px;
+      width: 900px;
+      float: left;
+    }
+
+    .gouwu {
+      width: 110px;
+      height: 25px;
+      border: 1px #cccccc solid;
+      background-color: #fff;
+      margin-top: 26px;
+      padding-left: 80px;
+      padding-top: 9px;
+      font-size: 12px;
+    }
+
+    .s {
+      width: 43px;
+      height: 37px;
+      background-color: #f10215;
+      margin-left: -90px;
+      margin-top: 26px;
+    }
+
+    .ss {
+      width: 495px;
+      height: 35px;
+      border: 1px red solid;
+      margin-top: 26px;
+      margin-right: 90px;
+      line-height: 35px;
+      font-size: 14px;
+      padding-left: 5px;
+      color: #a59fa2;
+    }
+
+    .xiaozi {
+      height: 35px;
+      width: 900px;
+    }
+
+    .xiaozi ul li {
+      float: left;
+      font-size: 13px;
+    }
+
+    .xiaozi ul li a {
+      color: #a4a19b;
+      margin-left: 4px;
+    }
+
+    .hd {
+      height: 0px;
+      line-height: 42px;
+    }
+
+    .hd ul li {
+      float: left;
+      font-size: 17px;
+    }
+
+    .hd ul li a {
+      color: #555555;
+      margin-left: 30px;
+      margin-left: 14px;
+      padding-left: 16px
+    }
+
+    .top2 {
+      height: 480px;
+      background-color: #f6f6f6;
+    }
+
+    .box-a {
+      height: 480px;
+      width: 16%;
+      margin-right: 9px;
+      background-color: #6e6568;
+    }
+
+    .box-a ul {
+      padding: 14px 8px;
+      color: #fafafa;
+    }
+
+    .box-a a {
+      font-size: 15px;
+      color: #fafafa;
+      line-height: 27px;
+      margin: 0 3px;
+    }
+
+    .box-b {
+      height: 480px;
+      width: 66%;
+      margin-right: 9px;
+    }
+
+    .box-c {
+      background-color: #fff;
+      height: 480px;
+      width: 16%;
+      /*border: solid #d3d7d4 1px;*/
+      margin-top: -14px;
+    }
+
+    .box-c .c1 {
+      height: 115px;
+    }
+
+    .c1 .bb1,
+    .bb2 {
+      width: 50px;
+      height: 20px;
+      border: solid red 2px;
+      padding: 2px 11px;
+    }
+
+    .box-c .c2 {
+      height: 175px;
+      border-top: solid #d3d7d4 1px;
+    }
+
+    .box-c .c2 ul li {
+      float: left;
+    }
+
+    .box-c .zizi ul li {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .box-c .zizi a {
+      color: #666a74;
+    }
+
+    .box-c .c3 table td {
+      width: 48px;
+      height: 59px;
+      border: solid 1px #d3d7d4;
+    }
+
+    .box-c .c3 a {
+      font-size: 13px;
+      color: #666a74;
+      position: relative;
+      top: 16px;
+      right: -3px;
+    }
+
+    .box-c table {
+      border-collapse: collapse;
+    }
+
+    .box-c .c3 table td {}
+
+    #j1 {
+      background: url("jlt.png") 6px -76px no-repeat;
+    }
+
+    #j2 {
+      background: url("jlt.png") 9px -30px no-repeat;
+    }
+
+    #j3 {
+      background: url("jlt.png") -35px -74px no-repeat;
+    }
+
+    #j4 {
+      background: url("jlt.png") -79px 14px no-repeat;
+    }
+
+    #j5 {
+      background: url("jlt.png") -79px -30px no-repeat;
+    }
+
+    #j6 {
+      background: url("jlt.png") 11px 13px no-repeat;
+    }
+
+    #j7 {
+      background: url("jlt.png") -34px -29px no-repeat;
+    }
+
+    #j8 {
+      background: url("jlt.png") -78px -75px no-repeat;
+    }
+
+    #j9 {
+      background: url("jlt.png") -124px 14px no-repeat;
+    }
+
+    #j10 {
+      background: url("jlt.png") -123px -31px no-repeat;
+    }
+
+    #j11 {
+      background: url("jlt.png") -123px -74px no-repeat;
+    }
+
+    #j12 {
+      background: url("jlt.png") -34px 12px no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <!-- 黑背景 -->
+    <div class="w">
+      <div class="back"></div>
+      <!--最上背景 -->
+    </div>
+  </div>
+  <div class="head">
+    <div class="back2">
+      <div class="w">
+        <div class="dog left">
+          <img src="./2.png" alt="">
+        </div>
+        <div class="divo">
+          <img style="position:relative;left: 12px;top: 6px;" src="./3.png" alt="">
+          <a href="#">北京</a>
+          <a style="position:relative;left: 214px; border-left:0px;" href="#">你好，请登录</a>
+          <a style="position:relative;left: 208px; border-left:0px;color:red" href="#">免费注册</a>
+          <div class="right">
+            <ul>
+              <li><a href="#">手机京东</a></li>
+              <li><a href="#">网站导航</a></li>
+              <li><a href="#">客户服务</a></li>
+              <li><a href="#">企业采购</a></li>
+              <li><a href="#">京东会员</a></li>
+              <li><a href="#">我的订单</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w">
+      <img style="position:relative;left: 30px;" src="./zfb.png" alt="">
+      <img style="position:relative;left: -351px;top: -11px;" src="./chaxun.png" alt="">
+      <div class="sousuo">
+        <img style="position:relative;left: 766px;top: 34px;" src="./car.png" alt="">
+        <img style="position:relative;left: 826px;top: 24px;" src="./0.png" alt="">
+        <div class="right">
+          <div class="gouwu"><a style="color:red" href="#">我的购物车</a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="s"></div>
+        </div>
+        <div class="right">
+          <div class="ss">机械键盘</div>
+        </div>
+      </div>
+      <div style="margin-left: 303px;margin-top: -4px;" class="xiaozi">
+        <div class="xiaohe">
+          <ul>
+            <li><a style="color:red" href="#">1元秒电脑</a></li>
+            <li><a href="#">平板电脑节</a></li>
+            <li><a href="#">农资周年庆</a></li>
+            <li><a href="#">七夕钜惠</a></li>
+            <li><a href="#">低至5折</a></li>
+            <li><a href="#">爱士堡啤酒</a></li>
+            <li><a href="#">花洒套装</a></li>
+            <li><a href="#">夏日饮品</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hd">
+        <div class="right">
+          <img src="./a.jpg" alt="">
+        </div>
+        <div style="margin-left: 211px;" class="xiaohe2">
+          <ul>
+            <li><a href="#"><b>秒杀</b></a></li>
+            <li><a href="#"><b>优惠券</b></a></li>
+            <li><a href="#"><b>闪购</b></a></li>
+            <li><a href="#"><b>拍卖</b></a></li>
+            <li><a style="border-left:solid 1px #cccccc;" href="#"><b>服装城</b></a></li>
+            <li><a href="#"><b>京东超市</b></a></li>
+            <li><a href="#"><b>生鲜</b></a></li>
+            <li><a href="#"><b>全球购</b></a></li>
+            <li><a style="border-left:solid 1px #cccccc;" href="#"><b>京东金融</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="top2">
+    <div class="w">
+      <div class="box-a left">
+        <ul>
+          <li><a href="#">家用电器</a></li>
+          <li><a href="#">手机</a>/<a href="#">运营商</a>/<a href="#">数码</a></li>
+          <li><a href="#">电脑</a>/<a href="#">办公</a></li>
+          <li><a href="#">家居</a>/<a href="#">家具</a>/<a href="#">家装</a>/<a href="#">厨具</a></li>
+          <li><a href="#">男装</a>/<a href="#">女装</a>/<a href="#">童装</a>/<a href="#">内衣</a></li>
+          <li><a href="#">美妆个护</a>/<a href="#">宠物</a></li>
+          <li><a href="#">女鞋</a>/<a href="#">箱包</a>/<a href="#">钟表</a>/</li><a href="#">珠宝</a>
+          <li><a href="#">男鞋</a>/<a href="#">运动</a>/<a href="#">户外</a></li>
+          <li><a href="#">汽车</a>/<a href="#">汽车用品</a></li>
+          <li><a href="#">母婴</a>/<a href="#">玩具乐器</a></li>
+          <li><a href="#">食品</a>/<a href="#">酒类</a>/<a href="#">生鲜</a>/<a href="#">特产</a></li>
+          <li><a href="#">礼品鲜花</a>/<a href="#">农资绿植</a></li>
+          <li><a href="#">医药保健</a>/<a href="#">计生情趣</a></li>
+          <li><a href="#">图书</a>/<a href="#">音像</a>/<a href="#">电子书</a></li>
+          <li><a href="#">机票</a>/<a href="#">酒店</a>/<a href="#">旅游</a>/<a href="#">生活</a></li>
+          <li><a href="#">理财</a>/<a href="#">众筹</a>/<a href="#">白条</a>/<a href="#">保险</a></li>
+        </ul>
+      </div>
+      <div class="box-b left">
+        <img src="./z1.jpg" alt="">
+        <img style="width: 393px; height: 136px;" src="./z2.jpg!q90" alt="">
+        <img style="width: 393px; height: 136px;" src="./z3.jpg" alt="">
+      </div>
+      <div class="box-c left">
+        <div class="c1">
+          <div style="height:70px;">
+            <div class="tu left" style="margin: 9px">
+              <img src="./yy.png" alt="">
+            </div>
+            <div class="zi" style="font-size: 13px;height: 13px;line-height: 4;">
+              <div style="color:#666a74">
+                Hi，欢迎来到京...
+              </div>
+              <div style="margin-top: -32px;">
+                <a style="color:#666a74" href="#">登录</a>
+                <a style="color:#666a74" href="#">注册</a>
+              </div>
+            </div>
+          </div>
+          <div class="left" style="margin: 0 15px;">
+            <div class="bb1 left" style="margin-right: 10px;">
+              <a href="#" style="font-size:12px; color:red">新人福利</a>
+            </div>
+            <div class="bb2 left" style="width:51">
+              <a href="#" style="font-size:12px; color:red">PLS会员</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="c2">
+          <div style="height: 36px;border-bottom: 1px solid #d3d7d4;">
+            <ul style="padding: 8px 13px;">
+              <li><a href="#" style="color:#525252; font-size:14px; margin-right: 9px;border-right: 1px solid #d3d7d4;padding-right: 14px;">促销</a></li>
+              <li><a href="#" style="color:#525252; font-size:14px; border-bottom:solid 2px red; padding-bottom: 8px;">公告</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <a href="#" class="right" style="color:#666a74; font-size:14px; margin-top: -29px;margin-right: 12px;">更多</a>
+          </div>
+          <div class="zizi" style="margin: 9px;">
+            <ul>
+              <li><a href="#">福建部分地区因交通限行配...</a></li>
+              <li><a href="#">京东商城到家服务品牌上线</a></li>
+              <li><a href="#">京东保租上线 减法生活有惊喜</a></li>
+              <li><a href="#">沃尔玛与京东合作再升级 官...</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="c3">
+          <table style="position:relative">
+            <tr>
+              <td id="j1" style="border-left: solid 1px #fff;"><a style="margin-left: 4px;" href="#">话费</a></td>
+              <td id="j2"><a style="margin-left: 4px;" href="#">机票</a></td>
+              <td id="j3"><a style="margin-left: 5px;" href="#">酒店</a></td>
+              <td id="j4" style="border-right: solid 1px #fff;"><a style="margin-left: 5px;" href="#">游戏</a></td>
+            </tr>
+            <tr>
+              <td id="j5" style="border-left: solid 1px #fff;"><a href="#">企业购</a></td>
+              <td id="j6"><a href="#">加油卡</a></td>
+              <td id="j7"><a href="#">电影票</a></td>
+              <td id="j8" style="border-right: solid 1px #fff;"><a href="#">火车票</a></td>
+            </tr>
+            <tr>
+              <td id="j9" style="border-left: solid 1px #fff;border-bottom: solid 1px #fff;"><a style="margin-left: 5px;" href="#">众筹</a></td>
+              <td id="j10" style=" border-bottom: solid 1px #fff;"><a style="margin-left: 5px;" href="#">理财</a></td>
+              <td id="j11" style="border-bottom: solid 1px #fff;"><a href="#">礼品卡</a></td>
+              <td id="j12" style="border-right: solid 1px #fff; border-bottom: solid 1px #fff;"><a style="margin-left: 5px;" href="#">白条</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
