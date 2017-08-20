@@ -8,13 +8,12 @@
     * {
       margin: 0;
       padding: 0;
-      /*background-color: #f6f6f6;*/
+      /*font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;*/
     }
 
     a {
       text-decoration: none;
     }
-
     ul li {
       list-style: none;
     }
@@ -157,7 +156,7 @@
     .box-a {
       height: 480px;
       width: 16%;
-      margin-right: 9px;
+      margin-right: 13px;
       background-color: #6e6568;
     }
     .box-a ul {
@@ -176,13 +175,14 @@
     .box-b {
       height: 480px;
       width: 66%;
-      margin-right: 9px;
+      margin-right: 5px;
     }
     .box-c {
       background-color: #fff;
       height: 480px;
       width: 16%;
       /*border: solid #d3d7d4 1px;*/
+      margin-left: 6px;
       margin-top: -14px;
     }
     .box-c .c1 {
@@ -226,8 +226,6 @@
     .box-c table {
       border-collapse: collapse;
     }
-    .box-c .c3 table td {
-    }
     .box-c a:hover {
       color: red;
     }
@@ -247,6 +245,102 @@
     #j10 {background: url("jlt.png") -123px -31px no-repeat;}
     #j11 {background: url("jlt.png") -123px -74px no-repeat;}
     #j12 {background: url("jlt.png") -34px 12px no-repeat;}
+    .h-back {
+      background-color: #f6f6f6;
+      height: 65px;
+      padding-top: 1px;
+    }
+     .h-back .hf {
+      margin-top: 10px;
+      background-image: url("hf.png") ;
+      background-repeat: no-repeat;
+      width: 1190px;
+      height: 55px;
+    }
+    .h-back .hf-2 {
+      float: right;
+      background-color: #cf0313;
+      height: 55px;
+      width: 10px;
+      margin-top: 10px;
+    }
+    .h-back .hf-1 {
+      background-image: url("hf22.png");
+      background-repeat: no-repeat;
+      height: 22px;
+      margin: -2px;
+      width: 22px;
+    }
+    .t-back {
+      background-color: #f6f6f6;
+      height: 280px;
+    }
+    .t-back .tt {
+      background-color: #fff;
+      height: 225px;
+    }
+    .tbox-a {
+      width: 185px;
+      height: 225px;
+      padding-left: 15px;
+    }
+    .tbox-b {
+      width: 184px;
+      height: 225px;
+      border-left: 1px #d3d7d4 solid;
+      padding-left: 15px
+    }
+    .t-back {
+      font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+    }
+    .t-back .tt a {
+      font-size:13px;
+      color:#acacac
+    }
+    .t-back .tt a:hover {
+      color: red;
+    }
+    .p-back {
+      background-color: #f6f6f6;
+      height: 475px;
+    }
+    .pbox-a {
+      height: 445px;
+      background-color: #fff;
+      margin-left: 0px;
+      width: 393px;
+      margin-right: 10px;
+    }
+    .dak {
+      height: 370px;
+      width: 373px;
+      padding: 10px;
+    }
+    .dak table {
+      border-collapse: collapse;
+    }
+    .dak table td {
+      width: 185px;
+      height: 120px;
+      border: solid 1px #d3d7d4;
+    }
+    #zi {
+      font-size: 14px;
+      color: #4998a1;
+      position: relative;
+      top: 14px;
+      left: 20px;
+      width: 80px;
+      line-height: 20px;
+    }
+    #zi1 {
+      font-size: 14px;
+      line-height: 16px;
+      color: #666;
+      text-indent: 10px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
   </style>
 </head>
 
@@ -349,6 +443,7 @@
   <!-- 下半部分 -->
   <div class="bottoms">
     <div class="w">
+      <!-- 左部分 -->
       <div class="box-a left">
         <ul>
           <li><a href="#">家用电器</a></li>
@@ -369,11 +464,13 @@
           <li><a href="#">理财</a>/<a href="#">众筹</a>/<a href="#">白条</a>/<a href="#">保险</a></li>
         </ul>
       </div>
+      <!-- 中间部分 -->
       <div class="box-b left">
         <img src="./z1.jpg" alt="">
         <img style="width: 393px; height: 136px;"src="./z2.jpg!q90" alt="">
         <img style="width: 393px; height: 136px;"src="./z3.jpg" alt="">
       </div>
+      <!-- 右边部分 -->
       <div style="margin-top: -3px;"class="box-c left">
         <div class="c1">
           <div style="height:70px;">
@@ -444,6 +541,178 @@
         </div>
     </div>
   </div>
+</div>
+  <!-- 中间横幅 -->  <!-- 外边距合并情况 加padding-->
+  <div class="h-back">
+    <div class="w ">
+      <div class="hf left">
+        <div class="hf-1 left"></div>
+        <div class="j-m">
+          <img style="margin-top: 5px;"src="xx.png" alt="">
+          <span style="font-size: 15px;position: relative;top: -10px;left: 7px;"><a style="color: #fff;"href="#">总有你想不到的低价</a></span>
+          <img  style="position: relative;top: -4px;left: 6px;"src="xjt.png" alt="">
+          <img style="position: relative;top: 3px;left: 560px;"src="sj.png" alt="">
+        </div>
+      </div>
+      <div class="hf-2"></div>
+    </div>
+  </div>
+  <!-- 图片区 -->
+  <div class="t-back">
+    <div class="w">
+      <div style="background-color:#fff;height: 249px;padding-top: 1px;">
+        <div style="height: 225px;margin-top: 12px;">
+          <div class="tt left">
+            <div class="tbox-a left">
+              <div style="height:160px;"class="tp">
+                <a href="#"><img style="margin-left: 21px;margin-top: 15px; "src="t1.jpg" alt=""></a>
+                <img style="position: relative;top: -109px;left: -163px;"src="xlb.png" alt="">
+              </div>
+              <div class="tz1">
+                <a href="#">【灵动系列 心动】ELVIRA艾维拉2017新款纯银项链女韩版时</a>
+              </div>
+              <div style="font-size:13px; color:#acacac;position: relative;top: 7px;left: 13px;"class="jg1">
+                <span style="color:red;font-size:14px;">¥</span><b style="color:red;font-size: 18px;"> 11219.00</b>
+                &nbsp;¥ <del>219.00</del>
+              </div>
+            </div>
+            <div class="tbox-b left">
+              <div style="height:160px;"class="tp">
+                <a href="#"><img style="margin-left: 21px;margin-top: 15px; "src="t3.jpg" alt=""></a>
+              </div>
+              <div class="tz1">
+                <a href="#">联想(Lenovo)IdeaPad 100S固态硬盘版14.0英寸笔记本电脑</a>
+              </div>
+              <div style="font-size:13px; color:#acacac;position: relative;top: 7px;left: 13px;"class="jg1">
+                <span style="color:red;font-size:14px;">¥</span><b style="color:red;font-size: 18px;"> 2959.00</b>
+                &nbsp;¥ <del>3199.00</del>
+              </div>
+            </div>
+            <div class="tbox-b left">
+              <div style="height:160px;"class="tp">
+                <a href="#"><img style="margin-left: 21px;margin-top: 15px; "src="t4.jpg" alt=""></a>
+                <img style="position: relative;top: -156px;left: -9px;"src="jx.png" alt="">
+              </div>
+              <div style="font-size:13px;color:#acacac"class="tz1">
+                <a href="#">zippo打火机煤油防风芝宝火机个性定制雕刻照片刻字签名七夕</a>
+              </div>
+              <div style="font-size:13px; color:#acacac;position: relative;top: 7px;left: 13px;"class="jg1">
+                <span style="color:red;font-size:14px;">¥</span><b style="color:red;font-size: 18px;"> 169.00</b>
+                &nbsp;¥ <del>189.00</del>
+              </div>
+            </div>
+            <div class="tbox-b left">
+              <div style="height:160px;"class="tp">
+                <a href="#"><img style="margin-left: 21px;margin-top: 15px; "src="t5.jpg" alt=""></a>
+              </div>
+              <div class="tz1">
+                <a href="#">海尔模卡（MOOKA）U65H3 65英寸 4K安卓智能网络纤薄窄</a>
+              </div>
+              <div style="font-size:13px; color:#acacac;position: relative;top: 7px;left: 13px;"class="jg1">
+                <span style="color:red;font-size:14px;">¥</span><b style="color:red;font-size: 18px;"> 4789.00</b>
+                &nbsp;¥ <del>5299.00</del>
+              </div>
+            </div>
+            <div class="tbox-b left">
+              <div style="height:160px;"class="tp">
+                <a href="#"><img style="margin-left: 21px;margin-top: 15px; "src="t6.jpg" alt=""></a>
+              </div>
+              <div class="tz1">
+                <a href="#">阳澄联合阳澄湖大闸蟹礼券 1988型公4.0两 母3.0两 4对8只</a>
+              </div>
+              <div style="font-size:13px; color:#acacac;position: relative;top: 7px;left: 13px;"class="jg1">
+                <span style="color:red;font-size:14px;">¥</span><b style="color:red;font-size: 18px;"> 198.00</b>
+                &nbsp;¥ <del>278.00</del>
+              </div>
+            </div>
+            <div class="tbox-b left">
+              <img style="margin-left: -15px;"src="t7.jpg" alt="">
+            </div>
+      </div>
+       </div>
+     </div>
+    </div>
+  </div>
+  <!-- 排行榜区域 -->
+  <div class="p-back">
+    <div class="w">
+      <div style="height:445px;width:1200px;"class="p_box left">
+        <div class="pbox-a left">
+          <div style="height:55px;background-color:#4998a1"class="fx">
+            <img style="position: relative;top: -1px;left: -1px;"src="lj.png" alt="">
+            <span style="font-size: 21px;position: relative;left: 10px;top: 10px;color: #fff;">发现好货</span>
+            <span class="right"style="font-size: 14px;position: relative;top: 21px;left: -43px;"><a style="color: #fff;"href="#">发现品质生活 >></a></span>
+          </div>
+          <div class="dak">
+            <table>
+              <tr>
+                <td style="border-left:0px;border-top:0px">
+                  <a href="#"><p id="zi"> 茅台 玫瑰金酒 53度</p></a>
+                  <a class="right"href="#"><img src="fx1.webp" alt=""></a>
+                </td>
+                <td style="border-right:0px;border-top:0px">
+                  <a href="#"><p id="zi">华硕128G固态商务本</p></a>
+                  <a class="right"href="#"><img src="fx2.webp" alt=""></a>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-left:0px;">
+                  <a href="#"><p id="zi">贵州茅台 飞天茅台</p></a>
+                  <a class="right"href="#"><img src="fx3.webp" alt=""></a>
+                </td>
+                <td style="border-right:0px;">
+                  <a href="#"><p id="zi">微软13.5英寸触控本</p></a>
+                  <a class="right"href="#"><img src="fx4.webp" alt=""></a>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-left:0px;border-bottom:0px">
+                  <a href="#"><p id="zi">红色茅台 国酒之父</p></a>
+                  <a class="right"href="#"><img src="fx5.webp" alt=""></a>
+                </td>
+                <td style="border-right:0px;border-bottom:0px">
+                  <a href="#"><p id="zi">NIKE气垫运动鞋</p></a>
+                  <a class="right"href="#"><img src="fx6.webp" alt=""></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="pbox-a left">
+          <div style="height:55px;background-color:#76488e"class="hm">
+            <img style="position: relative;top: -1px;left: -1px;"src="zj.png" alt="">
+            <span style="font-size: 21px;position: relative;left: 10px;top: 10px;color: #fff;">会买专辑</span>
+            <span class="right"style="font-size: 14px;position: relative;top: 21px;left: -43px;"><a style="color: #fff;"href="#">甄选优质好物 >></a></span>
+          </div>
+          <div class="dak">
+            <div style="border-bottom:1px solid #d3d7d4"class="kk">
+            <div style="padding-left: 16px;height: 159px;margin-top: 15px;"class="sb">
+              <a href="#"><p id="zi1">一加5领衔，盘点热销全球国产手机榜单</p></a>
+              <a href="#"><img src="hm1.jpg" alt=""></a>
+              <a href="#"><img src="hm2.jpg" alt=""></a>
+              <a href="#"><img src="hm3.jpg" alt=""></a>
+            </div>
+            </div>
+            <div style="padding-left: 16px;height: 159px;margin-top: 27px;"class="sb">
+              <a href="#"><p id="zi1">轻松穿出甜美范，小仙女就选轻透网纱裙</p></a>
+              <a href="#"><img src="hm4.jpg" alt=""></a>
+              <a href="#"><img src="hm5.jpg" alt=""></a>
+              <a href="#"><img src="hm6.jpg" alt=""></a>
+              <img style="margin-left: 127px;"src="dd.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div style="margin-right:0px;"class="pbox-a left">
+          <div style="height:55px;background-color:#e77005"class="hm">
+            <img style="position: relative;top: -5px;left: -1px;"src="hj.png" alt="">
+            <span style="font-size: 21px;position: relative;left: 10px;top: 10px;color: #fff;">排行榜</span>
+            <span class="right"style="font-size: 14px;position: relative;top: 21px;left: -43px;"><a style="color: #fff;"href="#">专属你的购物指南 >></a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
