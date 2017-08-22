@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>和css一样的伪类选择器一致</title>
+  </head>
+  <body>
+    <ul class="one">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <p>p元素</p>
+      <p>p2元素</p>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+    ----------------------------------
+    <ul class="one">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+      <li>d</li>
+      <p>p元素</p>
+      <li>e</li>
+      <li>f</li>
+      <li>g</li>
+      <li>h</li>
+    </ul>
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    $(".one li:first-child").css("color", "red");
+
+    //nth-child 把所有的同辈元素都计数了（从1开始严格按照顺序进行筛选，第4个不是li则赋予属性无效，支持多个相同类）
+    //eq只把符合条件的同辈元素计数（从0开始筛选，如果第4个不是li则跳到下一个，直到是li为止进行赋予属性，多个相同类时，只支持第一个类）
+    $(".one li:nth-child(4)").css("color", "blue");
+    $(".one li:eq(4)").css("font-size", "50px");
+
+    // :nth-child伪类可以传递表达式
+
+    // $(".one li:nth-child(2n)").css("border", "1px solid red");
+    // $(".one li:nth-child(2n+1)").css("border", "1px solid green");
+
+    $(".one li:nth-child(2n)").append("<span> - 偶数位置!</span>");
+    $(".one li:nth-child(2n+1)").append("<span> - 奇数位置!</span>");
+
+    </script>
+   </body>
+</html>
