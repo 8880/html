@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    * {
+      margin: auto;
+    }
+      table {
+        border-collapse: collapse;
+
+      }
+      td,th {
+        border: 1px solid #000;
+        width: 100px;
+        height: 20px;
+      }
+      a {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button style="margin:auto;"id="ad">添加一行</button>
+    <button id="del">删除</button>
+    <table>
+
+
+      <tr>
+        <th>name</td>
+        <th>gender</th>
+        <th>age</th>
+        <th>删除</th>
+      </tr>
+    </table>
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+
+    $("#ad").click(function(){
+      $("table tr:eq(0)").after("<tr><td></td><td></td><td></td><td ><button>删除</button></td></tr>");
+      $("tr button").click(function(){
+        $(this).closest("tr").remove();
+      });
+    })
+
+
+
+
+    </script>
+  </body>
+</html>
