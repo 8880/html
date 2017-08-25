@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>个人注册</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .w {
+      width: 1210px;
+      margin: 0 auto;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    .head {
+      background: url("headbg.jpg");
+      background-repeat: repeat-x;
+      background-position: left;
+      background-position: bottom;
+      height: 110px;
+    }
+
+    .clearfix::after {
+      visibility: hidden;
+      clear: both;
+      display: block;
+      content: ".";
+      height: 0;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    .lg {
+      width: 160px;
+      height: 50px;
+      float: left;
+      margin-top: 24px;
+      background-image: url("icon.png");
+    }
+
+    .zi {
+      float: left;
+      height: 34px;
+      line-height: 34px;
+      font-size: 24px;
+      color: #333;
+      padding-left: 30px;
+      margin-top: 34px;
+    }
+    .zi2 {
+      ont-size: 16px;
+      float: right;
+      margin-top: 55px;
+      color: #999;
+    }
+    .main {
+      margin: 50px auto 60px;
+      width: 830px;
+    }
+    .yy {
+      float: left;
+      margin-left: 104px;
+      height: 605px;
+      padding-left: 90px;
+      border-left: solid 1px #e6e6e6;
+    }
+    .yy .y1 {
+      width: 160px;
+      height: 60px;
+      border-bottom: solid 1px #ddd;
+      margin-left: 30px;
+    }
+    i {
+      display: inline-block;
+      width: 30px;
+      height: 29px;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+    .cc {
+      background-position: 0 -50px;
+      background: url("icon.png") 0 -50px no-repeat;
+    }
+    .yy1 {
+      width: 160px;
+      height: 60px;
+      border-bottom: solid 1px #ddd;
+      margin-left: 30px;
+    }
+    .yy2 {
+      width: 160px;
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    .ccc {
+      background: url("icon.png") -50px -50px no-repeat;
+    }
+    .noo {
+      position: relative;
+      border: solid 1px #ddd;
+      width: 398px;
+      height: 52px;
+    }
+    label {
+      float: left;
+      width: 90px;
+      height: 52px;
+      line-height: 52px;
+      padding-left: 20px;
+      color: #666;
+    }
+
+    .iss {
+      border: 0 none;
+      font-size: 14px;
+      width: 190px;
+      height: 19px;
+      padding-bottom: 11px;
+      padding-left: 20px;
+      padding-top: 16px;
+    }
+    #yhjg {
+      visibility: hidden;
+    }
+    #mmjg {
+      visibility: hidden;
+    }
+    #qrmmjg {
+      visibility: hidden;
+    }
+    input {
+      color: rgb(204, 204, 204);
+      outline: none;
+    }
+    .tj {
+      width: 100%;
+      height: 54px;
+      color: #fff;
+      background: #e22;
+      border: 0;
+      font-size: 16px;
+      font-family: "Microsoft YaHei","Hiragino Sans GB";
+      outline: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="head">
+    <div class="w clearfix">
+      <div class="logo">
+        <a href="#" class="lg"></a>
+        <div class="zi">欢迎注册</div>
+        <div class="zi2">
+          已有账号？
+          <a href="#">请登录</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 身体 -->
+  <div class="st">
+    <div class="w">
+      <div class="main ">
+        <div style="width:400px;"class="left">
+          <div class="biaodan">
+            <div class="noo">
+              <label>用 &nbsp;户 &nbsp;名</label>
+              <div class="">
+                <input id="y1"type="text" class="iss" value="您的账户名和登录名"name="username">
+              </div>
+            </div>
+            <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
+              <p id="yhjg">用户名不可以为空</p>
+            </div>
+            <div class="noo">
+              <label>设 置 密 码</label>
+              <div class="">
+                <input id="y2"type="text" class="iss" name="mm" value="建议至少使用两种字符组合">
+              </div>
+            </div>
+            <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
+              <p id="mmjg">密码不可以为空</p>
+            </div>
+            <div class="noo">
+              <label>确 认 密 码</label>
+              <div class="">
+                <input id="y3"type="text" class="iss" name="qrmm" value="请再次输入密码">
+              </div>
+            </div>
+            <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
+              <p id="qrmmjg">不可以为空</p>
+            </div>
+            <div class="noo">
+              <label>中国 0086</label>
+              <div class="">
+                <input id="y4"type="text" class="iss" name="sj" value="建议使用常用手机">
+              </div>
+            </div>
+            <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
+              <p id="sjjg">电话不可以为空</p>
+            </div>
+            <div class="noo">
+              <label>验　证　码</label>
+              <div class="">
+                <input id="y5"type="text" class="iss" name="yzm" value="请输入验证码">
+              </div>
+            </div>
+            <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
+              <p id="yzmjg">验证码不可以为空</p>
+            </div>
+            <div class="noo">
+              <label>手机验证码</label>
+              <div class="">
+                <input id="y6"type="text" class="iss" name="sjyzm" value="请输入手机验证码">
+              </div>
+            </div>
+            <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
+              <p id="sjyzmjg">手机验证码不可以为空</p>
+            </div>
+            <button id="login"class="tj">立即注册</button>
+          </div>
+        </div>
+        <div class="yy">
+          <div class="yy1">
+            <a style="display: block;width: 160px;height: 30px;"href="#">
+              <i class="cc"></i>
+              <span style="font-size: 14px;color: #666;">企业用户注册</span>
+            </a>
+          </div>
+          <div class="yy2">
+            <a href="#" style="display: block;width: 170px;height: 40px;">
+              <i style="    display: inline-block;width: 30px;height: 30px;vertical-align: text-bottom;margin-right: 15px;float: left;margin-top: 7px;" class="ccc"></i>
+              <span style='font-size:14px;color: #666;'>
+                INTERNATIONAL<br>
+                CUSTOMERS
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <script src="./jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+
+    $("#y1").focus(function(){
+      $(this).attr("value", "")
+      $("#y1").focusout(function(){
+        $(this).attr("value", "您的账户名和登录名")
+      });
+    });
+    $("#y2").focus(function(){
+      $(this).attr("value", "")
+      $("#y2").focusout(function(){
+        $(this).attr("value", "建议至少使用两种字符组合")
+        });
+    });
+    $("#y3").focus(function(){
+      $(this).attr("value", "")
+      $("#y3").focusout(function(){
+        $(this).attr("value", "请再次输入密码")
+        });
+    });
+    $("#y4").focus(function(){
+      $(this).attr("value", "")
+      $("#y4").focusout(function(){
+        $(this).attr("value", "建议使用常用手机")
+        });
+    });
+    $("#y5").focus(function(){
+      $(this).attr("value", "")
+      $("#y5").focusout(function(){
+        $(this).attr("value", "请输入验证码")
+        });
+    });
+    $("#y6").focus(function(){
+      $(this).attr("value", "")
+      $("#y6").focusout(function(){
+        $(this).attr("value", "请输入手机验证码")
+        });
+    });
+    $("#login").click(function(){
+      var username = $("input[name=username]").val();
+      var mm = $("input[name=mm]").val();
+      var qrmm = $("input[name=qrmm]").val();
+      var yzm = $("input[name=yzm]").val();
+      var sjyzm = $("input[name=sjyzm]").val();
+      var sj = $("input[name=sj]").val();
+      console.log(username);
+      if ((!username) || (username=="您的账户名和登录名")){
+        $("#yhjg").css("visibility", "visible");
+      }
+      if ((!mmjg) || (mm=="建议至少使用两种字符组合")){
+        $("#mmjg").css("visibility", "visible");
+      }
+      if ((!qrmmjg) || (qrmm=="请再次输入密码")){
+        $("#qrmmjg").css("visibility", "visible");
+      }
+    });
+  </script>
+</body>
+
+</html>
