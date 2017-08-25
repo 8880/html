@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小米</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+        ul li{
+          list-style: none;
+        }
+      .w {
+        width: 1226px;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: none;
+      }
+      .clearfix::after {
+        visibility: hidden;
+        clear: both;
+        display: block;
+        content: ".";
+        height: 0;
+      }
+      .clearfix {
+        *zoom: 1;
+      }
+      .top {
+        height: 40px;
+        background-color: #333;
+      }
+      .top a {
+        color: #b0b0b0;
+      }
+      .top a:hover {
+        color: #fff;
+        cursor: default;
+      }
+      .top-nav {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+      }
+      .sep {
+        margin: 0 .3em;
+        color: #424242;
+      }
+      .gocar {
+        width: 120px;
+        margin-left: 15px;
+        background: #424242;
+        float: right;
+        cursor: pointer;
+      }
+      .car {
+        position: relative;
+        z-index: 32;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #b0b0b0;
+        font-size: 6px;
+      }
+      .login {
+        line-height: 40px;
+        float: right;
+        font-size: 10px;
+      }
+      .log {
+          height: 100px;
+      }
+      .log .log1 {
+        float: left;
+        width: 62px;
+        margin-top: 22px;
+      }
+      .lb {
+        position: relative;
+      display: block;
+      width: 55px;
+      height: 55px;
+      overflow: hidden;
+      background-color: #ff6700;
+      }
+      .log2 {
+        float: left;
+        width: 850px;
+      }
+      .log2 ul {
+        position: relative;
+        z-index: 10;
+        float: left;
+        /*width: 820px;*/
+        height: 88px;
+        margin: 0;
+        padding: 12px 0 0 30px;
+        list-style-type: none;
+        font-size: 16px;
+      }
+      .log2 ul li {
+        float: left;
+        height: 88px;
+        line-height: 5;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+      .log2 li:hover {
+        color: #ff7e07;
+      }
+      .log3 {
+        float: right;
+        width: 296px;
+        margin-top: 25px;
+        height: 50px;
+      }
+
+      .z {
+        height: 460px;
+      }
+      .zl {
+        width: 188px;
+        background: rgba(0,0,0,0.6);
+        opacity: 0.5;
+        padding: 23px;
+        line-height: 2;
+        font-size: 21px;
+        float: left;
+        height: 414px;
+      }
+      .zl a {
+        color: #fff;
+        font-size: 14px;
+      }
+      .tpp {
+        background-image: url("tp.jpg") ;
+        height: 460px;
+      }
+      .jt {
+        background: url("jt.png") -85px  no-repeat;
+        height: 69px;
+        position: relative;
+        top: 187px;
+        left: 234px;
+        width: 42px;
+      }
+      .z2 {
+        height: 170px;
+        margin-top: 15px;
+      }
+      .l1 table {
+        border-collapse: collapse;
+        font-size: 1px;
+        background-color: #f6f6f6;
+        float: left;
+      }
+      .l1 table td {
+        width: 77px;
+        top: 13px;
+        left: 16px;
+        position: relative;
+        height: 84px;
+        border: solid 1px #d3d7d4;
+      }
+      #j1 {
+        background: url("jlt.png") -1px -89px no-repeat;
+        margin-left: 10px;
+        margin-top: -15px;
+        height: 20px;
+        width: 20px;
+      }
+      #j2 {
+        background: url("jlt.png") -45px -89px no-repeat;
+        margin-left: 10px;
+        margin-top: -15px;
+        height: 20px;
+        width: 20px;}
+        #j3 {
+          background: url("jlt.png") -90px -89px no-repeat;
+          margin-left: 10px;
+          margin-top: -15px;
+          height: 20px;
+          width: 20px;}
+        #j4 {
+          background: url("jlt.png") -45px -44px no-repeat;
+          margin-left: 10px;
+          margin-top: -15px;
+          height: 20px;
+          width: 22px;}
+        #j5 {
+          background: url("jlt.png") -45px -1px no-repeat;
+          margin-left: 10px;
+          margin-top: -15px;
+          height: 22px;
+          width: 22px;}
+          #j6 {
+            background: url("jlt.png") -2px -1px no-repeat;
+            margin-left: 10px;
+            margin-top: -15px;
+            height: 22px;
+            width: 22px;}
+          .l2 {
+            float: left;
+          }
+          .gg {
+            position: absolute;
+            width: 100%;
+            height: 230px;
+            background-color: #fff;
+            border-top: 1px #d3d7d4 solid;
+            border-bottom: 1px #d3d7d4 solid;
+            z-index: 2;
+            display: none;
+          }
+          .gg1 ,.gg2 {
+            position: absolute;
+            width: 100%;
+            height: 230px;
+            background-color: #fff;
+            border-top: 1px #d3d7d4 solid;
+            border-bottom: 1px #d3d7d4 solid;
+            z-index: 2;
+            display: none;
+          }
+    </style>
+  </head>
+  <body>
+    <!-- 顶部导航 -->
+    <div class="top ">
+      <div class="w">
+        <!-- 导航 -->
+        <div class="top-nav clearfix">
+          <a href="#">小米商城</a>
+          <span class="sep">|</span>
+          <a href="#">MIUI</a>
+          <span class="sep">|</span>
+          <a href="#">米聊</a>
+          <span class="sep">|</span>
+          <a href="#">游戏</a>
+          <span class="sep">|</span>
+          <a href="#">多看阅读</a>
+          <span class="sep">|</span>
+          <a href="#">云服务</a>
+          <span class="sep">|</span>
+          <a href="#">金融</a>
+          <span class="sep">|</span>
+          <a href="#">小米商城手机版</a>
+          <span class="sep">|</span>
+          <a href="#">问题反馈</a>
+          <span class="sep">|</span>
+          <a href="#">Select Region</a>
+        </div>
+        <!-- 购物车 -->
+        <div class="gocar clearfix">
+            <span class="car">购物车(0)</span>
+        </div>
+        <!-- 登录注册 -->
+        <div class="login clearfix">
+          <a href="#">登录</a>
+          <span class="sep">|</span>
+          <a href="#">注册</a>
+          <span class="sep">|</span>
+          <a href="#">消息通知</a>
+
+        </div>
+      </div>
+    </div>
+    <!-- logo部分 -->
+    <div class="log">
+      <div class="w clearfix">
+        <div class="log1">
+          <div class="lb"><img style="margin-left: 3px;margin-top: 4px; cursor:pointer"src="mi-logo.png" alt=""></div>
+        </div>
+        <div class="log2 clearfix">
+          <ul>
+            <li style="position: relative;float: left;width: 127px;padding-right: 15px;">
+            </li>
+            <li id="xm">小米手机</li>
+            <li id="hm">红米</li>
+            <li id="pb">平板 · 笔记本</li>
+            <li>电视</li>
+            <li>盒子 · 影音</li>
+            <li>路由器</li>
+            <li>智能硬件</li>
+            <li>服务</li>
+            <li>社区</li>
+          </ul>
+        </div>
+        <div class="log3">
+          <input id="s1" type="text" name="" value="" style="height: 44px;width: 245px;">
+        </div>
+      </div>
+    </div>
+    <div class="gg">
+      <img src="f1.png" alt="">
+    </div>
+    <div class="gg1">
+      <img src="f2.png" alt="">
+    </div>
+    <div class="gg2">
+      <img src="f1.png" alt="">
+    </div>
+    <!-- 中间部分 -->
+    <div class="z">
+        <div class="w">
+          <div class="zl">
+            <div class="cc">
+              <a href="#">手机 电话卡 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">笔记本 平板 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">电视 盒子 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">路由器 智能硬件 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">移动电源 电池 插线板 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">耳机 音箱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">保护套 贴膜 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">线材 支架 储存卡 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">箱包 服饰 鞋 眼镜 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+            <div class="cc">
+              <a href="#">米兔 生活周边 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:19px;">></b></a><br>
+            </div>
+          </div>
+          <div class="tpp">
+            <div class="jt">
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- 中间部分2 -->
+    <div class="z2">
+      <div class="w">
+        <div class="l1">
+          <table>
+            <tr>
+              <td><div id="j1"></div>选购手机</td>
+              <td><div id="j2"></div>企业团购</td>
+              <td><div id="j3"></div>F码通道</td>
+            </tr>
+            <tr>
+              <td><div id="j4"></div>米粉卡</td>
+              <td><div id="j5"></div>以旧换新</td>
+              <td><div id="j6"></div>话费充值</td>
+            </tr>
+          </table>
+        </div>
+        <div class="l2">
+          <img style="width:316px;margin-left: 11px;"src="tt1.jpg" alt="">
+          <img style="width:316px;margin-left: 11px;"src="tt2.jpg" alt="">
+          <img style="width:316px;margin-left: 11px;"src="tt3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- 下面 -->
+    <div class="x">
+      <div class="w">
+        <img style="margin-top:40px;" src="xx.png" alt="">
+      </div>
+    </div>
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    $("#s1").focus(function(){
+      $(this).after("<ul style='background-color:#fff; width:243px; height:332px; border:solid 1px #ff6700; font-size:15px;'>小米6<li>红米Note4X</li><li>小米MIX</li><li>小米Max2</li><li>小米手机5c</li><li>手环</li>耳机</li><li>充电宝</li></ul>")
+      $("#s1").focusout(function(){
+        $(".log3 ul").remove();
+      });
+    });
+    $("#pb").mouseover(function(){
+      $(".gg").css("display", "block")
+      $("#pb").mouseout(function(){
+        $(".gg").css("display", "none");
+      });
+    });
+    $("#hm").mouseover(function(){
+      $(".gg1").fadeIn(1000);   slideDown
+
+    });
+    $("#hm").mouseout(function(){
+      $(".gg1").fadeOut(1000);  slideUp
+    });
+
+    $("#xm").mouseover(function(){
+      $(".gg2").slideDown(1000);
+
+    });
+    $("#xm").mouseout(function(){
+      $(".gg2").slideUp(1000);
+    });
+
+    $(".cc").hover(function(){
+      $(this).css("background-color", "#ff7e07");
+    },  function(){
+        $(this).css("background-color", "#4a5860")
+
+    });
+    </script>
+  </body>
+</html>
