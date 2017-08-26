@@ -18,6 +18,9 @@
       text-decoration: none;
       color: #000;
     }
+    a:hover {
+      text-decoration: underline;
+    }
     .head {
       background: url("headbg.jpg");
       background-repeat: repeat-x;
@@ -144,10 +147,20 @@
     #qrmmjg {
       visibility: hidden;
     }
+    #sjjg {
+      visibility: hidden;
+    }
+    #yzmjg {
+      visibility: hidden;
+    }
+    #sjyzmjg {
+      visibility: hidden;
+    }
     input {
       color: rgb(204, 204, 204);
       outline: none;
     }
+
     .tj {
       width: 100%;
       height: 54px;
@@ -158,6 +171,21 @@
       font-family: "Microsoft YaHei","Hiragino Sans GB";
       outline: none;
       cursor: pointer;
+    }
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      border-top: solid 1px #e6e6e6;
+      color: #999;
+      padding-bottom: 30px;
+    }
+    .footer .links {
+      padding-top: 30px;
+      padding-bottom: 15px;
+    }
+    .links a {
+      color: #999;
+      margin: 0 7px;
     }
   </style>
 </head>
@@ -179,22 +207,23 @@
   <!-- 身体 -->
   <div class="st">
     <div class="w">
-      <div class="main ">
+      <div class="main clearfix">
         <div style="width:400px;"class="left">
           <div class="biaodan">
             <div class="noo">
               <label>用 &nbsp;户 &nbsp;名</label>
               <div class="">
-                <input id="y1"type="text" class="iss" value="您的账户名和登录名"name="username">
+                <input id="y1"type="text" class="iss" placeholder="您的账户名和登录名"name="username" >
               </div>
             </div>
             <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
               <p id="yhjg">用户名不可以为空</p>
+              <img id="tu1"style="display: none;position: relative;top: -21px;left: -131px;"src="zc.png" alt="">
             </div>
             <div class="noo">
               <label>设 置 密 码</label>
               <div class="">
-                <input id="y2"type="text" class="iss" name="mm" value="建议至少使用两种字符组合">
+                <input id="y2"type="password" class="iss" name="mm" placeholder="建议至少使用两种字符组合">
               </div>
             </div>
             <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
@@ -203,7 +232,7 @@
             <div class="noo">
               <label>确 认 密 码</label>
               <div class="">
-                <input id="y3"type="text" class="iss" name="qrmm" value="请再次输入密码">
+                <input id="y3"type="text" class="iss" name="qrmm" placeholder="请再次输入密码">
               </div>
             </div>
             <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
@@ -212,7 +241,7 @@
             <div class="noo">
               <label>中国 0086</label>
               <div class="">
-                <input id="y4"type="text" class="iss" name="sj" value="建议使用常用手机">
+                <input id="y4"type="text" class="iss" name="sj" placeholder="建议使用常用手机">
               </div>
             </div>
             <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
@@ -221,7 +250,8 @@
             <div class="noo">
               <label>验　证　码</label>
               <div class="">
-                <input id="y5"type="text" class="iss" name="yzm" value="请输入验证码">
+                <input id="y5"type="text" class="iss" name="yzm" placeholder="请输入验证码">
+                <img style="position: relative;left: 180px;top: -43px;"src="yzm.png" alt="">
               </div>
             </div>
             <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
@@ -230,7 +260,7 @@
             <div class="noo">
               <label>手机验证码</label>
               <div class="">
-                <input id="y6"type="text" class="iss" name="sjyzm" value="请输入手机验证码">
+                <input id="y6"type="text" class="iss" name="sjyzm" placeholder="请输入手机验证码">
               </div>
             </div>
             <div style="color:red;height: 27px;margin-left: 124px;font-size: 14px;padding-top: 5px;"class="">
@@ -257,6 +287,34 @@
           </div>
         </div>
       </div>
+      <div class="footer">
+        <div class="links">
+          <a href="#">关于我们</a>
+           |
+          <a href="#">联系我们</a>
+           |
+          <a href="#">人才招聘</a>
+           |
+          <a href="#">商家入驻</a>
+           |
+          <a href="">广告服务</a>
+           |
+          <a href="#">手机京东</a>
+           |
+          <a href="">友情链接</a>
+           |
+           <a href="#">销售联盟</a>
+           |
+           <a href="#">京东社区</a>
+           |
+           <a href="#">京东公益</a>
+           |
+           <a href="#">English Site</a>
+        </div>
+        <div class="">
+          Copyright©2004-2016  京东JD.com 版权所有
+        </div>
+      </div>
     </div>
   </div>
 
@@ -265,39 +323,43 @@
   <script type="text/javascript">
 
     $("#y1").focus(function(){
-      $(this).attr("value", "")
+      $(this).attr("placeholder", "")
+      $("#tu1").css("display", "block")
       $("#y1").focusout(function(){
-        $(this).attr("value", "您的账户名和登录名")
+        $(this).attr("placeholder", "您的账户名和登录名")
+        $("#tu1").css("display", "none")
+
       });
     });
+
     $("#y2").focus(function(){
-      $(this).attr("value", "")
+      $(this).attr("placeholder", "")
       $("#y2").focusout(function(){
-        $(this).attr("value", "建议至少使用两种字符组合")
+        $(this).attr("placeholder", "建议至少使用两种字符组合")
         });
     });
     $("#y3").focus(function(){
-      $(this).attr("value", "")
+      $(this).attr("placeholder", "")
       $("#y3").focusout(function(){
-        $(this).attr("value", "请再次输入密码")
+        $(this).attr("placeholder", "请再次输入密码")
         });
     });
     $("#y4").focus(function(){
-      $(this).attr("value", "")
+      $(this).attr("placeholder", "")
       $("#y4").focusout(function(){
-        $(this).attr("value", "建议使用常用手机")
+        $(this).attr("placeholder", "建议使用常用手机")
         });
     });
     $("#y5").focus(function(){
-      $(this).attr("value", "")
+      $(this).attr("placeholder", "")
       $("#y5").focusout(function(){
-        $(this).attr("value", "请输入验证码")
+        $(this).attr("placeholder", "请输入验证码")
         });
     });
     $("#y6").focus(function(){
-      $(this).attr("value", "")
+      $(this).attr("placeholder", "")
       $("#y6").focusout(function(){
-        $(this).attr("value", "请输入手机验证码")
+        $(this).attr("placeholder", "请输入手机验证码")
         });
     });
     $("#login").click(function(){
@@ -311,13 +373,27 @@
       if ((!username) || (username=="您的账户名和登录名")){
         $("#yhjg").css("visibility", "visible");
       }
-      if ((!mmjg) || (mm=="建议至少使用两种字符组合")){
+      if ((!mm) || (mm=="建议至少使用两种字符组合")){
         $("#mmjg").css("visibility", "visible");
       }
-      if ((!qrmmjg) || (qrmm=="请再次输入密码")){
+      if ((!qrmm) || (qrmm=="请再次输入密码")){
         $("#qrmmjg").css("visibility", "visible");
       }
+      if ((!sj) || (sjjg=="请再次输入密码")){
+        $("#sjjg").css("visibility", "visible");
+      }
+
+    if ((!yzm) || (yzmjg=="请再次输入密码")){
+      $("#yzmjg").css("visibility", "visible");
+    }
+
+
+  if ((!sjyzm) || (sjyzmjg=="请再次输入密码")){
+    $("#sjyzmjg").css("visibility", "visible");
+  }
+
     });
+
   </script>
 </body>
 

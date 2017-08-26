@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .w {
+        width: 1180px;
+        margin: 0 auto;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      .clearfix::after {
+        visibility: hidden;
+        clear: both;
+        display: block;
+        content: ".";
+        height: 0;
+      }
+      .clearfix {
+        *zoom: 1;
+      }
+
+      .head-bg {
+        background-image: url("datu.jpg");
+        height: 560px;
+      }
+
+      .head-top {
+        height: 65px;
+        background-color: #1d2b40;
+        background: rgba(29,43,64,0.97);
+        visibility: visible;
+      }
+
+      .head-logo {
+        width: 118px;
+        height: 25px;
+        margin: 20px 50px 20px 0;
+        float: left;
+        visibility: visible;
+      }
+
+      .top-nav {
+        float: left;
+        font-size: 16px;
+        line-height: 64px;
+        visibility: visible;
+      }
+
+      .top-nav ul li {
+        float: left;
+        padding: 0 15px;
+        display: block;
+        height: 65px;
+        color: #fff;
+        cursor: default;
+      }
+
+      .top-nav ul li div {
+        margin-top: -78px;
+        border-bottom: 2px solid;
+        color: #367ae0;
+        height: 65px;
+        display: none;
+      }
+
+      .top-rt {
+        color: #fff;
+        font-size: 14px;
+        height: 64px;
+        float: right;
+      }
+
+      .top-rt ul li {
+        float: left;
+        margin: 23px 15px;
+        cursor: pointer;
+        z-index: 5;
+        position: relative;
+      }
+
+      .top-rt ul li:hover {
+        color: #367ae0;
+      }
+
+      .top-rt ul div {
+        border: 1px #fff solid;
+        width: 55px;
+        height: 26px;
+        position: relative;
+        left: 189px;
+        top: 20px;
+        border-radius: 4px;
+        background-color: ;
+        }
+
+        .top-rt ul div:hover {
+          cursor: pointer;
+        }
+
+        .top1 {
+          height: 557px;
+          background-color:
+          background-color: #1d2b40;
+          background: rgba(29,43,64,0.97);
+          display: none;
+        }
+        .top1 ul li {
+          height: 42px;
+          padding-left: 25px;
+          line-height: 2;
+          border-right: 1px solid #464547;
+          color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- head background -->
+    <div class="head-bg">
+      <div class="head-top">
+        <div class="w">
+          <!-- top logo -->
+          <div class="head-logo clearfix">
+            <img src="logo1.png" alt="">
+          </div>
+          <div class="top-nav clearfix">
+            <ul>
+              <li>产品<div></div></li>
+              <li>文档与资源<div></div></li>
+              <li style="cursor: pointer;">客户案例<div></div></li>
+              <li>合作与生态<div></div></li>
+              <li style="cursor: pointer;">博客<div></div></li>
+            </ul>
+          </div>
+          <div class="top-rt">
+            <ul>
+              <li>备案</li>
+              <li>控制台</li>
+              <li>登录</li>
+              <li id="login">注册</li>
+              <div id="login-b"></div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ss">
+        <div class="top1">
+          <div class="w">
+            <ul style="padding-right: 1000px; padding-top: 24px;">
+              <li>云计算基础服务</li>
+              <li>云安全（易盾）</li>
+              <li>通信与视频</li>
+              <li>大数据服务</li>
+              <li>域名与备案</li>
+              <li>客服运营</li>
+              <li>专属云</li>
+            </ul>
+          </div>
+        </div>
+        <div class="top1">
+          <div class="w">
+            <ul style="padding-right: 1000px; padding-top: 24px;">
+              <li>云计算基础服务2</li>
+              <li>云安全（易盾）2</li>
+              <li>通信与视频2</li>
+              <li>大数据服务2</li>
+              <li>域名与备案2</li>
+              <li>客服运营2</li>
+              <li>专属云2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="top1">
+            <div class="w">
+              <ul style="padding-right: 1000px; padding-top: 24px;">
+                <li>云计算基础服务3</li>
+                <li>云安全（易盾）3</li>
+                <li>通信与视频3</li>
+                <li>大数据服务3</li>
+                <li>域名与备案3</li>
+                <li>客服运营3</li>
+                <li>专属云3</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="yy.js"></script>
+  </body>
+</html>
