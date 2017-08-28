@@ -9,14 +9,14 @@ $("#login-b, #login").mouseover(function(){
 });
 
 $(".top-nav li").mouseover(function(){
-  sy = $(this).index(".top-nav li")
+  sy = $(this).index()
   $(".ss .top1").eq(sy).show()
   $(".top-nav ul li div").eq(sy).show()
   $(".ss .top1").not($(".ss .top1").eq(sy)).hide()
   $(".top-nav ul li div").not($(".top-nav ul li div").eq(sy)).hide()
 
   $(".top-nav li").mouseout(function(){
-    sy = $(this).index(".top-nav li")
+    sy = $(this).index()
     $(".ss .top1").eq(sy).hide()
     $(".top-nav ul li div").eq(sy).hide()
   });
