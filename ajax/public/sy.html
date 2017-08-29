@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="start">sss</button>
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+      var xhr = new XMLHttpRequest();
+      console.log(xhr.readyState);
+      xhr.open("get","http://127.0.0.1:8000/index?name=fff&age=15&score=100", true);
+      console.log(xhr.readyState);
+        xhr.send();
+
+
+      // $("#start").click(function(){
+
+        // xhr.open("get","http://127.0.0.1:8000/index?name=fff&age=15&score=100", true);
+        xhr.onreadystatechange = function () {
+          console.log("ss"+xhr.readyState);
+          console.log(xhr.response);
+          $("<h1>ssss</h1>").appendTo("body");
+        }
+
+
+
+        $("body").append("<h1>send ok!</h1>");
+      // });
+
+
+    </script>
+  </body>
+</html>
