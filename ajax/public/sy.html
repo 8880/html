@@ -13,7 +13,6 @@
       console.log(xhr.readyState);
       xhr.open("get","http://127.0.0.1:8000/index?name=fff&age=15&score=100", true);
       console.log(xhr.readyState);
-        xhr.send();
 
 
       // $("#start").click(function(){
@@ -26,7 +25,8 @@
         }
 
 
-
+        xhr.send();
+        console.log(xhr.readyState);
         $("body").append("<h1>send ok!</h1>");
       // });
 

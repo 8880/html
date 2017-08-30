@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #eee;
+      }
+
+      .lgi {
+        margin: 0 auto;
+        width: 306px;
+        height: 321px;
+        padding: 20px;
+        margin-top: 200px;
+        border: 1px #fcb solid;
+        background-color: #fff;
+
+      }
+      .yh1 {
+        border: 1px solid #bdbdbd;
+        height: 38px;
+        width: 304px;
+      }
+      .yh2 {
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 38px;
+        height: 38px;
+        border-right: 1px solid #bdbdbd;
+        background: url(./images/pwd-icons-new.png) no-repeat;
+      }
+      .yh3 {
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 38px;
+        height: 38px;
+        border-right: 1px solid #bdbdbd;
+        background: url(./images/pwd-icons-new.png) -48px 0px no-repeat;
+      }
+      #yh {
+        position: relative;
+        left: 52px;
+        top: -28px;
+      }
+      #mm {
+        position: relative;
+        left: 52px;
+        top: -28px;
+      }
+      input {
+        outline: none;
+        border: none;
+        width: 244px;
+      }
+
+      .dd {
+        border: 1px solid #e85356;
+        display: block;
+        width: 302px;
+        background: #e4393c;
+        height: 31px;
+        line-height: 31px;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Microsoft YaHei';
+        cursor: pointer;
+      }
+      .yc,.mc {
+        visibility: hidden;
+        color: red;
+        margin-left: 46px;
+      }
+      .zhdl {
+        font-weight: 700;
+        color: #e4393c;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 14px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="lgi">
+      <p class="zhdl">账户登录</p>
+    <div class="yh1">  <div class="yh2"></div> <input id="yh" type="text" name="yhh"><br></div>
+    <div class="yc">用户名不存在</div>
+    <div class="yh1">  <div class="yh3"></div> <input id="mm"type="password" name="mmm"> <br></div>
+    <div class="mc">密码不正确</div>
+      <div class="dd"><span id="dl" style="margin-left:124px ;cursor:pointer"href="">登 录</span></div>
+    </div>
+
+
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(".dd").click(function(){
+        var yh = $("input[name=yhh]").val();
+        var mm = $("input[name=mmm]").val();
+
+
+        $.ajax({
+          method: "post",
+          url: "/login",
+          data: {name: yh, passwd: mm},
+          success: function(data, textStatus, jqXHR){
+            console.log(data);
+            if (data === "OK"){
+               window.location = "https://www.jd.com/";
+            } else if (yh != "admin"){$(".yc").css("visibility", "visible")}
+             if (mm != 123){$(".mc").css("visibility", "visible")}
+
+          },
+
+          error: function(jqXHR, textStatus, error){
+            console.log(error);
+          }
+        });
+
+      });
+
+    </script>
+  </body>
+</html>
