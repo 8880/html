@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盾牌</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bk {
+        background-color: rgb(36, 33, 27);
+        height: 980px;
+        width: 1900px;
+      }
+
+      .bbk {
+        margin-left: 700px ;
+      }
+
+      .s1 {
+        transform: translate(100px, 100px) rotate(45deg);
+        transition: all 1s;
+      }
+
+      .s2 {
+        transform: translate(300px, 221px) rotateX(13400deg) ;
+        transition: all 6s;
+        transition-timing-function: cubic-bezier(.19,1.02,0,1.02);
+
+      }
+      .s3 {
+        transform: translate(300px, 821px) rotate(250deg) skew(2deg, 5deg) scale(0.1,2);
+        transition: all 0.5s;
+      }
+      .s4 {
+        transform: translate(200px, 251px) rotate(75deg) skew(2deg, 5deg) scale(0.1,2);
+        transition: all 2s;
+      }
+      .s5 {
+        transform: rotate(0deg) ;
+        transition: all 5s;
+        transition-timing-function: cubic-bezier(.19,1.02,0,1.02);
+
+        /*transition-timing-function: ease-out;*/
+
+      }
+      .s6 {
+        transform: translate(120px, 400px) rotate(157deg) skew(30deg, 30deg) scale(0.2,0.1);
+        transition: all 0.7s;
+      }
+      .s7 {
+        transform: translate(300px, 400px) rotateZ(11360deg) skew(55deg, 150deg) scale(0.1,2);
+        transition: all 1s;
+      }
+      .s8 {
+        transform: translate(-300px, 400px) rotate(222deg) skew(130deg, 30deg) scale(1,0.2);
+        transition: all 2.5s;
+      }
+      .s9 {
+        transform: translate(300px, 400px) rotate(60deg) skew(10deg, 40deg) scale(1,0.7);
+        transition: all 2s;
+      }
+
+      .bbk:hover img {
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+
+      .bbk:hover .s5 {
+        transform: rotate(7200deg);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="bk">
+      <div class="bbk">
+        <img class="s1" src="./image0/shield_1_01.png" alt="">
+        <img class="s2" src="./image0/shield_1_02.png" alt="">
+        <img class="s3" src="./image0/shield_1_03.png" alt=""><br>
+        <img class="s4" src="./image0/shield_1_04.png" alt="">
+        <img class="s5" src="./image0/shield_1_05.png" alt="">
+        <img class="s6" src="./image0/shield_1_06.png" alt=""><br>
+        <img class="s7" src="./image0/shield_1_07.png" alt="">
+        <img class="s8" src="./image0/shield_1_08.png" alt="">
+        <img class="s9" src="./image0/shield_1_09.png" alt="">
+      </div>
+    </div>
+  </body>
+</html>

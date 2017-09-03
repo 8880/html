@@ -225,6 +225,7 @@
     $(".nav-item a.item").each(function(index){
       //此处的index为 从0开始的计数。。。。
       $(".nav-item a.item").eq(index).mouseover(function(){
+        console.log(index);
         //显示nav-bottom
         $(".nav .nav-bottom").show();
 

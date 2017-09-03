@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>火箭</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bk {
+        background-color: rgb(209, 236, 190);
+        width: 1860px;
+        height: 960px;
+        position: relative;
+        }
+
+      .rocket {
+        margin-left: 20px;
+        position: absolute;
+        height: 190px;
+        width: 100px;
+        bottom: 0;
+        left: 0;
+        background: url("./image0/rocket.png") no-repeat;
+        transform: rotate(45deg);
+        transition: all 2s;
+        transition-timing-function: cubic-bezier(1,0,.97,.21);
+      }
+
+      .bk:hover .rocket {
+        left: 100%;
+        bottom: 100%
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bk">
+      <div class="rocket"></div>
+    </div>
+  </body>
+</html>

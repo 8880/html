@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>径向渐变</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .one,
+      .two {
+        width: 500px;
+        height: 300px;
+        margin: 50px auto;
+        border-radius: 50%;
+      }
+
+      .one {
+        background: radial-gradient(177px at center, red, orange, yellow, green, cyan, blue, purple);
+      }
+
+      .two {
+        background: radial-gradient(ellipse at center, red, orange, yellow, green, cyan, blue, purple)
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="one"></div>
+
+    <div class="two"></div>
+
+  </body>
+</html>

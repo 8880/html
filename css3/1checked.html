@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      input {
+        width: 50px;
+        height: 50px;
+      }
+/*匹配用户界面上处于选中状态的元素E。(用于input type为radio与checkbox时)*/
+      input:checked + span {
+        background: pink;
+      }
+
+      input:checked + span::before {
+        content: "选中了";
+      }
+
+      /*被锚点中之后，的样式*/
+      p:target {
+        font-size: 50px;
+        color: red;
+      }
+
+      /* 内容为空的元素会被 选中 empty*/
+      .one:empty::before {
+        content: "空的";
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox">
+    <span></span>
+
+    <br><br>
+
+    <a href="#p1">锚点</a>
+    <p id="p1">但是都是第三方士大夫</p>
+
+    <div class="one">saddsdsaadsdasads</div>
+    <div class="one"></div>
+    <div class="one"></div>
+  </body>
+</html>

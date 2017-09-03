@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    body {
+      /*perspective: 5000px;*/
+    }
+
+    .cube {
+      position: relative;
+      transform: rotateX(-30deg) rotateY(30deg);
+      transform-style: preserve-3d;
+      transition: all 5s;
+      font-size: 150px;
+      text-align: center;
+      line-height: 150px;
+    }
+
+    .cube div {
+      position: absolute;
+      background: rgba(0, 0, 0, .1);
+      border: 1px solid #999;
+      width: 200px;
+      height: 200px;
+      transition: all 5s;
+
+    }
+
+    /*.m1 {
+      transform: translateZ(100px);
+    }
+
+    .m2 {
+      transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .m3 {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .m4 {
+      transform: rotateY(-90deg)translateZ(100px);
+    }
+
+    .m5 {
+      transform: rotateX(-190deg) translateZ(100px);
+    }
+
+    .m6 {
+      transform: rotate(125deg) rotate(88deg);
+    }*/
+
+    .cube:hover {
+      transform: rotateY(-150deg) rotateX(110deg) rotateZ(100deg);
+    }
+
+    .cube:hover .m6 {
+      transform: rotateY(-180deg) translateZ(100px);
+      transition: all 1s;
+    }
+
+    .cube:hover .m5 {
+      transform: rotateX(-90deg) translateZ(100px);
+      transition: all 3s;
+    }
+
+    .cube:hover .m4 {
+      transform: rotateY(-90deg) translateZ(100px);
+      transition: all 5s;
+    }
+
+    .cube:hover .m3 {
+      transform: rotateY(90deg) translateZ(100px);
+      transition: all 3s;
+    }
+
+    .cube:hover .m2 {
+      transform: rotateX(90deg) translateZ(100px);
+      transition: all 1s;
+    }
+
+    .cube:hover .m1 {
+      transform: translateZ(100px);
+      transition: all 3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cube">
+    <div class="m1">1</div>
+    <div class="m2">2</div>
+    <div class="m3">3</div>
+    <div class="m4">4</div>
+    <div class="m5">5</div>
+    <div class="m6">6</div>
+  </div>
+</body>
+
+</html>
