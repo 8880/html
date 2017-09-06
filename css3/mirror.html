@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>魔镜</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 300px;
+        height: 300px;
+        margin: 50px auto;
+        background-color: #666;
+        position: relative;
+      }
+
+      .mr-back {
+        background: url(./image/musict.jpg) no-repeat;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .mr-front {
+        background: url(./image/musicb.jpg) no-repeat;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 2s;
+      }
+
+      .box:hover .mr-front {
+        transform-origin: bottom;
+        transform: rotateX(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="mr-back"></div>
+      <div class="mr-front"></div>
+    </div>
+  </body>
+</html>

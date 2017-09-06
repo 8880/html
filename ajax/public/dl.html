@@ -113,9 +113,9 @@
           data: {name: yh, passwd: mm},
           success: function(data, textStatus, jqXHR){
             console.log(data);
-            if (data === "OK"){
+            if (data === "ok"){
                window.location = "https://www.jd.com/";
-            } else if (yh != "admin"){$(".yc").css("visibility", "visible")}
+            } else if (yh != "lisi"){$(".yc").css("visibility", "visible")}
              if (mm != 123){$(".mc").css("visibility", "visible")}
 
           },

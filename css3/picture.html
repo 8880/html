@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>轮播</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      @keyframes run {
+        0% {
+          transform: translateX(0px);
+        }
+
+        100% {
+          transform: translateX(-878px);
+        }
+      }
+
+      .box {
+        width: 878px;
+        margin: 300px auto;
+        border: 1px solid #666;
+        height: 86px;
+        padding-left: 4px;
+        overflow: hidden;
+      }
+
+      .box1 {
+        width: 1764px;
+        animation: run 10s linear infinite reverse;
+      }
+
+      img {
+        margin-left: -4px;
+      }
+
+      .box:hover .box1 {
+        animation-play-state: paused;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <img src="./image/1.jpg" alt="">
+        <img src="./image/2.jpg" alt="">
+        <img src="./image/3.jpg" alt="">
+        <img src="./image/4.jpg" alt="">
+        <img src="./image/5.jpg" alt="">
+        <img src="./image/6.jpg" alt="">
+        <img src="./image/7.jpg" alt="">
+        <img src="./image/1.jpg" alt="">
+        <img src="./image/2.jpg" alt="">
+        <img src="./image/3.jpg" alt="">
+        <img src="./image/4.jpg" alt="">
+        <img src="./image/5.jpg" alt="">
+        <img src="./image/6.jpg" alt="">
+        <img src="./image/7.jpg" alt="">
+      </div>
+    </div>
+  </body>
+</html>
