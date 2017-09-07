@@ -1,0 +1,17 @@
+.one {
+  color: yellow;
+  font-size: 20px;
+  width: 100px;
+  height: 100px; }
+
+.two {
+  color: red;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center; }
+
+.three {
+  color: blue;
+  font-size: 20px; }
+
+/*# sourceMappingURL=6mixin.css.map */

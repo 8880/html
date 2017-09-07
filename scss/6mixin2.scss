@@ -1,0 +1,12 @@
+//@mixin
+
+//define
+@mixin shadow($value...){
+  box-shadow: $value;
+}
+
+//use
+
+.one {
+  @include shadow(2px 2px 1px green, 5px 5px 4px red, 3px 3px 0px blue);
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,IAAK;EAKD,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM",
+"sources": ["../scss/10if.scss"],
+"names": [],
+"file": "10if.css"
+}

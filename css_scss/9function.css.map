@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAYA,IAAK;EACH,SAAS,EAAE,KAAQ;EACnB,OAAO,EAAE,GAAW;EAEpB,KAAK,EAAE,OAAgB",
+"sources": ["../scss/9function.scss"],
+"names": [],
+"file": "9function.css"
+}

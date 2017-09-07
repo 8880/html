@@ -1,0 +1,31 @@
+// line
+/*
+comment
+*/
+
+h1 {
+  color: red;
+}
+
+$fontSize: 20px;
+$color: yellow;
+$colorRgb: rgb(255,200,20);
+$border: 1px solid red;
+$value: item;     //zi ding yi lei ming
+$top: top;
+
+
+.one {
+  color: $color;
+  color:$colorRgb;
+  border: $border;
+}
+
+// #{} lei ming shi yong
+.#{$value} {
+  background: red;
+}
+
+.two {
+  border-#{$top}: $border;
+}

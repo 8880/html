@@ -1,0 +1,27 @@
+// ji cheng
+
+.hehe {
+  letter-spacing: 20px;
+}
+
+//@extend
+.one {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.two {
+  @extend .one;
+  color: red;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.three {
+  @extend .two;
+  @extend h1;
+}

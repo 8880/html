@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA;;EAEE;AAEF,EAAG;EACD,KAAK,EAAE,GAAG;;AAWZ,IAAK;EACH,KAAK,EARC,MAAM;EASZ,KAAK,EARI,OAAe;EASxB,MAAM,EARC,aAAa;;AAYtB,KAAW;EACT,UAAU,EAAE,GAAG;;AAGjB,IAAK;EACH,UAAc,EAjBP,aAAa",
+"sources": ["../scss/2classvalue.scss"],
+"names": [],
+"file": "2classvalue.css"
+}

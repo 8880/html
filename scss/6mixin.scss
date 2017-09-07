@@ -1,0 +1,24 @@
+//@mixin
+
+//define
+@mixin colorAndFont($color:blue, $size:2){
+  color: $color;
+  font-size: $size * 10px;
+}
+
+//use
+.one {
+  @include colorAndFont(yellow, 2);
+  width: 100px;
+  height: 100px;
+}
+
+.two{
+  @include colorAndFont(red);
+  line-height: 50px;
+  text-align: center;
+}
+
+.three {
+  @include colorAndFont;
+}

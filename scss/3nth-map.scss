@@ -1,0 +1,22 @@
+//value, nth($var, $index)
+
+$px: 20px 30px 40px 50px;
+$px2: 20px yellow, 30px green, 40px red, 50px cyan;
+
+//map key:value
+$sizes: (h1: 10px, h2: 20px, h3: 30px, h4: 40px,);
+
+.one {
+  font-size: nth($px,3);
+  margin: nth($px,1);
+}
+
+.two {
+  font-size: nth(nth($px2, 3), 1);
+  color: nth(nth($px2, 1), 2);
+}
+
+
+.three {
+  font-size: map-get($sizes, "h2");
+}

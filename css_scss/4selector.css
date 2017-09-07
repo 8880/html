@@ -1,0 +1,20 @@
+.one {
+  color: cyan;
+  height: 100px;
+  line-height: 100px; }
+  .one .one-1 {
+    margin: auto;
+    border: 1px solid red; }
+    .one .one-1 .one-1-1 {
+      background: red; }
+    .one .one-1::before {
+      content: "before ..."; }
+  .one::after {
+    content: "after ..."; }
+
+.two div {
+  color: green; }
+.two > div {
+  font-size: 100px; }
+
+/*# sourceMappingURL=4selector.css.map */

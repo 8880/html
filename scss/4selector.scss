@@ -1,0 +1,33 @@
+// selector nest
+
+.one {
+  color: cyan;
+  height: 100px;
+  line-height: 100px;
+
+  .one-1 {
+    margin: auto;
+    border: 1px solid red;
+    .one-1-1 {
+      background: red;
+    }
+
+    &::before {
+      content: "before ..."
+    }
+  }
+
+  &::after {
+    content: "after ..."
+  }
+}
+
+.two {
+  div {
+    color: green;
+  }
+
+  >div {
+    font-size: 100px;
+  }
+}
