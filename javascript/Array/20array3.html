@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>数组方法</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      console.log('****************************filter************************');
+      var a1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      // filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。
+      // 结果为true的留下,false的去掉
+      // filter不会影响原数组, 去掉奇数,留下偶数
+      var result = a1.filter(function(current, index, arr){
+        return current % 2 == 0;
+
+        // if (current % 2 === 0){
+        //   return true;
+        // } else {
+        //   return false;
+        // }
+      });
+
+      console.log(result);
+
+      //稀疏数组 变为 稠密数组
+      var a2 = [1, 2,,,,,,,,,,,,,,,3];
+
+      result = a2.filter(function(current, index, arr){
+        return current === undefined ? false : true;
+        // return current != undefined;
+      });
+
+      console.log(result);
+
+
+      var a3 = [2,4,6,8,10,12];
+      //整体测试！！！
+      result = a3.every(function(curr,index,arr){
+         return  curr % 2 === 0;
+      });
+      console.log(result)
+
+      console.log('*************************reduce***************************');
+
+      // reduce() 方法对累加器和数组中的每个元素 (从左到右)应用一个函数，将其减少为单个值。
+
+      //求和
+      var  sum = [10,20,30,40,50,60,70,80,90,100].reduce(function(acc,curr,index,arr){
+        // 如果调用reduce时，没有传递第二个参数，那么acc从数组的第一个元素开始
+
+        console.log("acc = ", acc);
+        console.log("curr = ", curr);
+
+        //本次返回值作为下一次的 acc
+        return acc + curr;
+      },0);
+
+      console.log(sum);
+
+      //求积
+      result = [1,2,3,4,5,6].reduce(function(acc,curr,index,arr){
+        return acc * curr;
+      });
+
+      console.log(result);
+
+    </script>
+  </body>
+</html>

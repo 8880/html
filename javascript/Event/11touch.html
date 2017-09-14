@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>移动端</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    /*
+    touchstart touchmove touchend
+    */
+
+    document.addEventListener('touchstart', function(event){
+      console.log('start x:', event.touches[0].clientX);
+      console.log('start y:', event.touches[0].clientY);
+    }, false);
+
+    document.addEventListener("touchmove", function(event){
+      console.log("moving.....");
+    },false);
+
+    document.addEventListener("touchend", function(event){
+      console.log("end x",event.changedTouches[0].clientX);
+      console.log("end y",event.changedTouches[0].clientY);
+    },false)
+
+    
+    </script>
+  </body>
+</html>
