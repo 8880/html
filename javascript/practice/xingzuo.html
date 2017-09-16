@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        margin: auto;
+        margin-top: 200px;
+        width: 650px;
+        height: 450px;
+        border: 1px  ;
+        box-shadow: 4px 3px 10px #777;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+
+      .boxtop {
+        box-sizing: border-box;
+        padding: 10px;
+        padding-left: 30px;
+      }
+
+      .boxtop h1 {
+        color: green;
+      }
+
+      #im {
+        width: 200px;
+        height: 80px;
+        background: url(./xingzuo/Icon.png) 1px 1px/80px no-repeat;
+        float: left;
+      }
+
+      .boxbottom {
+        color: pink;
+        box-sizing: border-box;
+        padding: 26px;
+        text-indent:2em;
+        font-size: 18px;
+        line-height: 29px;
+        clear: both;
+      }
+
+      .box-center .star {
+        padding-top: 10px;
+      }
+
+      .pc-star {
+        height: 20px;
+        background: url(./xingzuo/yunshi.png) no-repeat 280px 6px;
+      }
+
+      .pc-stars {
+        height: 20px;
+        width: 320px;
+        top: -18px;
+        position: relative;
+        background: url(./xingzuo/yunshi.png) no-repeat 280px -23px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="boxtop">
+        <h1>星座运势</h1>
+        <div id="im"></div>
+        <div class="box-center">
+          <select name="" id="myslt"style="background-color: #fff;width:100px; height:25px;">
+            <option value="0">白羊座</option>
+            <option value="1">金牛座</option>
+            <option value="2">双子座</option>
+            <option value="3">巨蟹座</option>
+            <option value="4">狮子座</option>
+            <option value="5">处女座</option>
+            <option value="6">天秤座</option>
+            <option value="7">天蝎座</option>
+            <option value="8">射手座</option>
+            <option value="9">摩羯座</option>
+            <option value="10">水瓶座</option>
+            <option value="11">双鱼座</option>
+          </select><br>
+          <div class="star">
+            <div class="pc-star">今日运势:</div>
+            <div id="pc" class="pc-stars"></div>
+          </div>
+        </div>
+      </div>
+      <div class="boxbottom" id="cnt">
+        <div>今日白羊总体来说可能会很在意关系上的事宜，不管是和朋友的沟通还是和爱人的沟通，可能会有些迷茫的感觉哦。今日爱情上整体来说要注意可能会有一些欺瞒或者不实的现象存在哦。今日工作上要注意与人交接的问题哦，可能会不太顺利。今日财运整体来说一般般，虽然有一些偏财。今日健康运势整体来说可能会有欠佳，要注意的是会有失眠的困扰。</div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      var col = [
+        'rosybrown',
+        'darkcyan',
+        'goldenrod',
+        'red',
+        'lightcoral',
+        'darkolivegreen',
+        'gainsboro',
+        'gold',
+        'indigo',
+        'lightsteelblue',
+        'chartreuse',
+        'firebrick',
+      ]
+
+      var star = [
+        '320px',
+        '318px',
+        '360px',
+        '287px',
+        '332px',
+        '341px',
+        '345px',
+        '320px',
+        '299px',
+        '350px',
+        '338px',
+        '310px',
+      ]
+      var picture = [
+        '0px',
+        '-80px',
+        '-160px',
+        '-240px',
+        '-320px',
+        '-400px',
+        '-480px',
+        '-560px',
+        '-640px',
+        '-720px',
+        '-800px',
+        '-880px',
+      ]
+      var content = [
+        '今日白羊总体来说可能会很在意关系上的事宜，不管是和朋友的沟通还是和爱人的沟通，可能会有些迷茫的感觉哦。今日爱情上整体来说要注意可能会有一些欺瞒或者不实的现象存在哦。今日工作上要注意与人交接的问题哦，可能会不太顺利。今日财运整体来说一般般，虽然有一些偏财。今日健康运势整体来说可能会有欠佳，要注意的是会有失眠的困扰。',
+        '今日整体来说要注意人际关系的问题哦，可能会有一些不愉快的纠纷出现，任何事情要理清顺序。今日爱情上整体来说可能会有一些揪心，可能会有旧事重提的现象出现哦。今日工作上整体来说还算不错，你的直觉可以帮助你很多。今日财运整体来说一般般，要注意的是人际上有花销。今日健康运势一般，要注意可能会有内分泌失调的情况出现。',
+        '今日双子整体来说会是忙碌奔波的一天，可能会吸收到很多新东西，你们可能会有很多抛头露面的机会，也可能会出去放松自己哦。今日爱情上整体来说还算是不错的一天，可能会一起出去有约会。今日工作上整体来说是很忙的一天，可能会有出差办事的机会。今日财运不佳，可能会有一笔大花销哦。今日健康运势要注意的是自己的腿部可能不太舒服哦。',
+        '今日巨蟹座整体来说可能会是还算不错的一天，你们今天更多的是关注自己的身体或者是工作哦。今日爱情上可以获得对方的体贴，但是感情上可能会有很多要求也会说教。今日工作上整体来说还算不错，同事关系相处很好哦。今日财运不错，可能会有一些事业上的收获哦，会努力赚钱。今日健康上需要注意的是可能会比较劳累哦，注意休息。',
+        '今日狮子们可能会很需要来表现自己，希望自己能够获得身边所有人的认可哦，可能会表现得有些霸道。今日爱情上可能会很需要对方来宠着自己哦，有时候有些情绪化。今日工作上要注意的是自己不要过于主观，需要多配合别人。今日财运整体来说还算不错的一天哦，可能会有偏财进入。今日健康运势不错，要注意的是饮食的正常哦。',
+        '今日处女座整体来说还算是不错的一天，你们今天可能会比较安静，专注做自己的事情，也不是特别累反而很自得其乐哦。今日爱情上整体来说要注意的是可能会有点固执哦，不要太被动。今日工作上整体来说比较清闲，你会做做幕后的工作比较多。今日财运还不错，可能会有一些意外之财哦。今日健康运势一般般，可能会有一些精神方面的困扰。',
+        '今日天秤整体的运势一般般哦，今天要注意的是人际方面的事宜，可能会对别人会有一些挑剔的表现，让别人对你有一些不爽。今日爱情上整体来说还不错，对对方体贴，但是要注意的是给对方一些空间哦。今日工作上会需要利用人际关系的助力，需要加强沟通。今日财运一般般，可能会有一些零碎的开支哦。今日健康上要注意的是肠胃的问题，注意调节饮食。',
+        '今日天蝎座整体来说运势一般般哦，要注意的是人际方面可能会带给你一些困扰，会有人对你有设限，可能需要进一步的沟通哦。今日爱情上整体来说要注意的自己会觉得很不自由，可能会想要自己独处。今日工作上要注意的是人际方面的协调哦，以及会有领导的限制。今日财运一般，可能人际上会有花销。今日健康运势要注意的是血液循环的问题，以及有些劳累哦。',
+        '今日射手座要注意的是可能会是比较忙碌的一天，你可能会东奔西跑，要注意的是细节上的事情要多留心，不要忘记。今日爱情上整体里说可能会比较挑剔，需要注意收敛自己。今日工作上的事情会比较幸运，可能会有贵人出现哦。今日财运还算不错，可能会有一些偏财方面的收获。今日健康运势会有回升，你会觉得精力会很棒哦。',
+        '今日摩羯座的运势会有所回升，可能重心会在于家庭以及自己的安全感，你们今天无论和谁沟通都会很棒哦。今日爱情上可能会有很多沟通哦，会获得对方的鼓励和支持。今日工作上还算是不错的一天，贵人运会是棒棒的哦。今日财运整体来说还算不错哦，会有一些进账储蓄哦。今日健康运势会有提升，但要注意的是自己的胃部保护。',
+        '今日水瓶座整体来说会是迷迷糊糊的一天，你们可能会显得有些脆弱也比较敏感，有时候可能会有一些玻璃心哦。今日爱情上整体来说会是甜蜜的一天，可能会获得对方的支持哦。今日工作上整体来说要注意不要犯迷糊。今日财运一般般，可能会有一些人际方面的花销哦。今日健康运势下滑，要注意的是肠胃的健康。',
+        '今日双鱼座整体来说还算不错，事业会是你们的亮点哦，虽然辛苦一天，但是也可能会有不错的收获了。今日爱情上整体来说还算不错哦，但是要注意自己有时候可能会有些严肃。今日工作运势是大大的好哦，可能会有贵人相助需要把握机会。今日财运还算不错，可能会有一些事业上的报酬。今日健康运势一般般，可能会比较劳累哦，要注意多休息',
+    ]
+
+
+      var myslt = document.getElementById('myslt');
+      var cnt = document.getElementById('cnt');
+      var im = document.getElementById('im');
+      var pc = document.getElementById('pc');
+
+      myslt.onclick = function(){
+        var index = myslt.selectedIndex;
+        var vle = myslt.options[index].value;
+        var one = document.createElement('div');
+        cnt.removeChild(cnt.firstElementChild);
+
+        im.style.backgroundPositionY = picture[vle];
+        pc.style.width = star[vle];
+        one.innerHTML = content[vle];
+        cnt.appendChild(one);
+        cnt.style.color = col[vle];
+      }
+
+
+    </script>
+  </body>
+</html>

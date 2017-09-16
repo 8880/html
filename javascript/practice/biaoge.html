@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      table {
+        margin: auto;
+        text-align: center;
+      }
+
+      th,
+      td {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <button id="add">添加</button>
+
+    <table border="1px" cellspacing='0'>
+      <caption>
+        <h2>信息表</h2>
+      </caption>
+
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>成绩</th>
+          <th>删除</th>
+        </tr>
+      </thead>
+
+      <tbody id="tb">
+      </tbody>
+    </table>
+
+
+    <script type="text/javascript">
+
+      var stus = [
+      ['zhangsan', 20, 88],
+      ['lisi', 25, 55],
+      ['wangwu', 33, 99],
+      ['zhaoliu', 44, 39],
+      ['liqi', 21, 68],
+      ['sunba', 11, 48],
+      ['wujiu', 71, 28],
+      ];
+
+      var add = document.getElementById('add');
+      var tb = document.getElementById('tb');
+      var dl;
+      var a1=0, b1=0, c1=0
+
+
+      function xin (a1, b1, c1){
+
+        var tr = document.createElement('tr');
+        var mes = document.createElement('td');
+        var mes1 = document.createElement('td');
+        var mes2 = document.createElement('td');
+        var del = document.createElement('td');
+
+          tb.appendChild(tr);
+          mes.innerHTML = stus[a1-1][0]
+          tr.appendChild(mes);
+          mes1.innerHTML = stus[b1-1][1]
+          tr.appendChild(mes1);
+          mes2.innerHTML = stus[c1-1][2]
+          tr.appendChild(mes2);
+          del.innerHTML = "<button onclick='ff(this)'>删除</button>"
+          tr.appendChild(del);
+
+        }
+
+        add.onclick = function (){
+
+          a1 += 1;
+          b1 += 1;
+          c1 += 1;
+          if (a1 == 8) {
+            alert("数据加载完毕")
+            a1 = 1, b1 = 1, c1 = 1;
+
+          }
+          xin(a1, b1, c1)
+          }
+
+          function ff(arr){
+            b = arr.parentNode.parentNode;
+            b.parentNode.removeChild(b)
+          }
+
+
+    </script>
+  </body>
+</html>
