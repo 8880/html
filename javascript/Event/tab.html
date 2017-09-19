@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .box {
+        width: 1000px;
+        margin: 100px auto;
+      }
+
+      .tabs {
+        height: 80px;
+      }
+
+      .tabs li {
+        height: 80px;
+        line-height: 80px;
+        width: 80px;
+        text-align: center;
+        margin: 0px 30px;
+        float: left;
+      }
+
+      .tabs li.active {
+        color: red;
+        text-decoration: underline;
+      }
+
+      .show {
+        height: 300px;
+        border: 1px solid red;
+      }
+
+      .show>ul {
+        display: none;
+      }
+
+      .show>ul.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <ul class="tabs">
+        <li class="active">热门</li>
+        <li>电视影音</li>
+        <li>电脑</li>
+        <li>家居</li>
+      </ul>
+
+      <div class="show">
+        <ul class="active">
+          <li>热门一</li>
+          <li>热门二</li>
+        </ul>
+        <ul>
+          <li>电视一</li>
+          <li>影音二</li>
+        </ul>
+        <ul>
+          <li>电脑一</li>
+          <li>电脑二</li>
+        </ul>
+        <ul>
+          <li>家居一</li>
+          <li>家居二</li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var tabs = document.getElementsByClassName('tabs')[0];
+      var contents = document.getElementsByClassName('show')[0];
+      var li = tabs.getElementsByTagName('li');
+
+      tabs.onmouseover = function(e){
+        var target = e.target;
+        console.log(li);
+        if (target.tagName === 'LI') {
+
+          console.log(tabs[i].index);
+          for (var i = 0; i < tabs.children.length; i++) {
+            tabs.children[i].className = "";
+            contents.children[i].className = "";
+          }
+
+          target.className = 'active';
+
+        }
+      }
+
+    </script>
+  </body>
+</html>
