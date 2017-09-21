@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>闭包</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function fun() {
+//创建闭包: 在函数内部定义一个函数, 并且该函数引用到了当前作用域中的变量, 并且要将该函数返回
+
+      var a = 10;
+      return function(){
+        console.log('a = ', a);
+
+      };
+
+    }
+
+    //innerFun 函数可以访问其他函数作用域中的变量
+    //innerFun就是闭包
+
+    var innerFun = fun();
+    innerFun();
+    </script>
+  </body>
+</html>
