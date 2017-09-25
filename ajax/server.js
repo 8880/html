@@ -27,6 +27,7 @@ app.post("/index", function(req, res, next){
     console.log(req.body);
     res.status(200);
     res.send(req.body);
+
 });
 
 app.post("/table", function(req, res, next){
