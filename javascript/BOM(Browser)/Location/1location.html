@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>location对象属性</title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+
+      //返回页面使用的协议 通常是http:或https:
+      console.log(window.location.protocol);
+
+      //返回不带端口号的服务器名称 www.baidu.com
+      console.log(location.hostname);
+
+      //返回URL中的目录和(或)文件名
+      console.log(location.pathname);
+
+      //返回URL中指定的端口号 如果URL中不包含端口号,则这个属性返回空字符串
+      console.log(location.port);
+
+      //返回URL的查询字符串 这个字符串以问号开头
+      console.log(location.search);
+
+      //返回URL中的hash(#号后跟零或多个字符), 如果URL中不包含散列,则返回空字符串
+      console.log(location.hash);
+
+
+    </script>
+  </body>
+</html>

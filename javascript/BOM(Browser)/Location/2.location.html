@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>location对象方法</title>
+  </head>
+  <body>
+
+    <button id='login'>登录</button>
+
+    <script type="text/javascript">
+
+      document.querySelector('#login').onclick = function(){
+        //页面跳转, 有记录
+        // location.assign('https://www.jd.com');
+        // window.location = "https://www.baidu.com";
+        // location.href = "https://www.tmall.com";
+
+        //替换，没有历史记录
+        // location.replace("https://www.mi.com");
+
+        //页面重载
+         location.reload(true)
+      };
+
+      // setInterval(function(){
+      //   location.reload();
+      // }, 5000)
+
+      
+    </script>
+  </body>
+</html>
