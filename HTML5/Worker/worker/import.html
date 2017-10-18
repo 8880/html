@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>测试importScripts</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    //服务器测试
+    var worker = new Worker("./computed.js");
+    worker.onmessage = function(event){
+      console.log(event.data);
+      if (event.data > 30){
+        worker.terminate();
+      }
+    }
+
+    </script>
+
+  </body>
+</html>
