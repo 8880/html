@@ -7,11 +7,18 @@
 </head>
 
 <body>
-  <script type="text/javascript">
-  var a = 11, b ='5';
 
-  var c = a - b;
-    alert(c)
+  <script type="text/javascript">
+
+    function foo() {}
+    delete foo.length;
+    alert(typeof foo.length);
+
+    // 答：number；
+    // foo.length的值还是0 delete无法删除
+
+
+
   </script>
 </body>
 

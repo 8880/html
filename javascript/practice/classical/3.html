@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function bar(){
+
+        return foo;  //注意变量与函数同名(foo)
+        foo = 10;
+        function foo(){}
+
+        var foo = 11;
+
+      }
+
+      alert(typeof bar());
+
+     /*
+     答：将输出function. (var foo = 11 虽然定义放在后面，但是变量会提升，
+        函数变量声明提升高于变量声明提升, 所以最后的结果是function)
+              */
+
+
+    </script>
+  </body>
+</html>

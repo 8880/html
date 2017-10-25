@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var name = "world";
+
+    (function() {
+
+      if (typeof name == 'undefined') {
+        var name = 'yang';
+        console.log('Hello ' + name)
+      } else {
+        console.log('Hello ' + name)
+      }
+    })()
+
+    //相当于
+
+    // var name = "world";
+    // (function() {
+    //   var name;
+    //   if (typeof name == 'undefined') {
+    //     var name = 'yang';
+    //     console.log('Hello ' + name)
+    //   } else {
+    //     console.log('Hello ' + name)
+    //   }
+    // })()
+
+    // Js中使用函数级作用域，不存在块级作用域。
+    // 所有普通块中的声明都会被提升到顶部，所以控制语句对声明的控制就显得完全没有效果
+
+    /*
+
+    因此，if判断的时候typeof name == 'undefined'是true。所以会执行条件为true里面的代码。输出就是Hello yang。
+    那么如果想实现上面的函数，我们该如何实现？答案非常简单那就创建块作用域了。如何最简单的创建块作用域呢？
+    那当然是采用es6的新特性let关键字。let关键字可以将变量绑定到所在的任意区域中通常在{...}中。换句话说。
+    let为其声明变量隐性劫持到所在区域中。下列例子中：let就绑定到if (typeof name == 'undefined') {...}中。
+    所以name不会被提升，所以判断就为假，于是就可以输出我们期待已久的‘helloworld’。
+
+    */
+
+    // var name = "world";
+    // (function() {
+    //   if (typeof name == 'undefined') {
+    //     let name = 'yang';
+    //
+    //     console.log('Hello ' + name)
+    //   } else {
+    //     console.log('Hello ' + name)
+    //   }
+    // })()
+
+    // 注意点：let所在的块级作用域，在声明代码被运行前，是不会像var那样会被查找到，提前声明，而是运行到了该代码才会被声明执行。
+    // 下面例子很好说明这个问题：
+
+    // (function() {
+    //   console.log(b);
+    //   let b = 2;
+    // })()
+  </script>
+</body>
+
+</html>

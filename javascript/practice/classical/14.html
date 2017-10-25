@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    window.val = 1;
+
+    var obj = {
+      val :2,
+      dbl: function(){
+        // console.log(val);
+        // console.log(this.val);
+        this.val *= 2;
+        val *= 2;
+        console.log(val);
+        console.log(this.val);
+      }
+    };
+
+    obj.dbl();//2 4
+    var func = obj.dbl;
+    func();//8 8
+
+    /*
+      obj.dbl里的this指向obj,即this.val = 2, val = 1(window下的,与obj里的val无关. val != val:2 这是对象!!!)
+      func 是在window下调用 即 this.val = val = 2
+    */
+    </script>
+  </body>
+</html>

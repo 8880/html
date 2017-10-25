@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      var foo = 1;
+
+      function bar(){
+
+        foo = 10;
+        return;
+
+        function foo(){}
+      }
+
+      bar();
+      alert(foo);
+
+
+      // 答：将输出1.  (这里访问的是window.foo，而不是bar里面的foo)
+
+    </script>
+  </body>
+</html>

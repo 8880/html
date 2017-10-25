@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>圆形点击区域</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .round {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: red;
+        cursor: pointer;
+      }
+
+      #canvas {
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="round"></div>
+
+    <canvas id="canvas"></canvas>
+
+    <script type="text/javascript">
+
+      var can = document.querySelector('#canvas');
+      can.width = 200;
+      can.height = 200;
+      var ct = can.getContext("2d");
+
+      ct.fillStyle = "orange";
+      ct.arc(100, 100, 100, 0, Math.PI * 2, false);
+      ct.fill();
+
+
+    </script>
+  </body>
+</html>

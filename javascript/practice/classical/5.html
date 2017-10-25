@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    console.log(a); //undefined
+
+    if (false) {
+      function a() {
+        console.log(100);
+      }
+    }
+
+    a(); //TypeError: a is not a function 理论上应该是100
+
+    /*
+
+    奇怪吧？？函数提升发生在所有代码执行之前，所以尽管a函数的定义过程写在了if分支中，但是理论上，它是不会影响函数声明提升的
+    在新版本的浏览器中会出现此问题，旧版本的浏览器中会在控制台中打印出100
+    这也提醒了我们尽量不要在控制语句中进行声明，会造成很多无法预知的bug
+
+    */
+
+    /*
+    if (false) {
+      var a = 10;
+    }
+
+    console.log(a); //undefined
+
+    // 相当于
+
+    var a;
+    if (false) {
+      a = 10;
+    }
+
+    console.log(a) //undefined
+
+    */
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+    var x = 4,
+      obj = {
+        x: 3,
+        bar: function() {
+          var x = 2;
+          setTimeout(function() {
+            var x = 1;
+            alert(this.x);
+          }, 1000);
+        }
+      };
+
+    obj.bar();
+
+    /*
+
+    答：输出4.
+
+    setTimeout方法是挂在window对象下的。setTimeout(匿名函数,time),这里的匿名函数形成了一个闭包，
+    从而能访问到外层函数的局部变量。也就是window中的x。(参考）
+
+    */
+  </script>
+</body>
+
+</html>

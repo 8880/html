@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+    var name = "the window";
+    var object = {　　
+      name: "my object",
+      　　getName: function() {　　　　
+        return this.name;　　
+      }
+    }
+
+    console.log(    object.getName()                      );
+    console.log(    (object.getName)()                    );
+    console.log(    (object.getName = object.getName)()   );
+
+
+    /*
+      my object
+      my object
+      the window
+
+      第一行的代码，this指向的就是object，所以毫无疑问；第二行代码虽然加上括号，就好像只是在引用一个函数，
+      但this的值得到了维持。因为object.getName和(object.getName)的定义相同。第三行代码，先执行一条赋值语句，
+      然后再调用赋值后的结果。因为这个赋值表达式的值是函数本身，所以this的值不能得到维持，结果就返回the window.
+
+
+    */
+  </script>
+</body>
+
+</html>

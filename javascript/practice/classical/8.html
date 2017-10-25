@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+    x = 1;
+
+    function bar() {
+      this.x = 2;
+      return x;
+    }
+
+    var foo = new bar();
+    alert(foo.x);
+
+    /*
+        答：输出2.
+        这里的this指向的是bar的对象实例。
+    */
+
+  </script>
+
+</body>
+
+</html>
