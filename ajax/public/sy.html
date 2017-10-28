@@ -3,34 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="./css/sy.css">
   </head>
   <body>
-    <button id="start">sss</button>
+    <button id="btn">发送ajax请求</button>
+    <table border="1px" cellspacing='0'>
+      <caption>
+        <h2>学生信息</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>成绩</th>
+          <th>邮箱</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+
     <script src="./js/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript">
+    $("#btn").click(function(){
+      var tb = document.querySelector('tbody');
+          $.ajax({
+            method: 'post',
+            url: '/stu',
 
-      var xhr = new XMLHttpRequest();
-      console.log(xhr.readyState);
-      xhr.open("get","http://127.0.0.1:8000/index?name=fff&age=15&score=100", true);
-      console.log(xhr.readyState);
+            success: function(data, textStatus, jqXHR){
+
+              data.people.forEach(function(cur, index){
+                console.log(index);
+                if (index > 10 - 1) {
+                  return ;
+                }else {
+                  $('tbody').append(`<tr><td>${cur.Name}</td><td>${cur.age}</td><td>${cur.email}</td></tr>`)
+                }
+              })
+
+            },
+            error: function(jqXHR, textStatus, error){
+              console.log(error);
+            }
+          });
 
 
-      // $("#start").click(function(){
-
-        // xhr.open("get","http://127.0.0.1:8000/index?name=fff&age=15&score=100", true);
-        xhr.onreadystatechange = function () {
-          console.log("ss"+xhr.readyState);
-          console.log(xhr.response);
-          $("<h1>ssss</h1>").appendTo("body");
-        }
-
-
-        xhr.send();
-        console.log(xhr.readyState);
-        $("body").append("<h1>send ok!</h1>");
-      // });
-
-
+     });
     </script>
   </body>
 </html>

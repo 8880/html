@@ -1,18 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <script type="text/javascript">
-      var fun=5
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>构造函数</title>
+      </head>
+      <body>
 
-      function fun() {
-        console.log("ddddd")
-      }
+        <script type="text/javascript">
 
-      console.log(fun)
+
+        fun ()=> {
+          console.log(this);
+        }
+
+        fun.call({value: 101})
+
+        </script>
+
+      </body>
+    </html>
+
     </script>
   </body>
 </html>

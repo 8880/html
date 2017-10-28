@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>深度克隆</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      //判断一个函数是否为普通对象(不是数组)
+      function isPlainObject(o){
+        return o.constructor === Object;
+      }
+
+      function deepCopy(obj){
+        var o; //o是返回的克隆之后的数据
+
+        //Array or Object
+        if (typeof obj === 'object') {
+
+          //普通对象
+          if (isPlainObject(obj)) {
+            o = {};
+            for (var key in obj){
+              console.log(obj[key]);
+              o[key] = deepCopy(obj[key]);
+            }
+
+            return o;
+          } else {
+            //数组
+            o = [];
+            for (let i = 0; i < obj.length; i++) {
+              console.log(obj[i]);
+              o[i] = deepCopy(obj[i]);
+            }
+            return o;
+          };
+        } else {
+          //不是数组不是对象
+          return obj;
+        }
+      };
+
+      var stu = {name:'lisi', age: 22, hobby: ["one", "two", {three: [1,2,3]}]};
+      var result = deepCopy(stu);
+      console.log(result);
+      console.log(stu);
+
+
+    </script>
+  </body>
+</html>
