@@ -14,6 +14,7 @@ http.createServer(function(req, res){
 	 console.log(queryObj);
 
 	 fs.readFile("./test.json", function(err, data){
+		 console.log(typeof data);
 		 res.write(queryObj.callback + "(" + data  + ")");// "handler({'name':'lisi', 'age':10})"
 		 res.end();
 	 });
